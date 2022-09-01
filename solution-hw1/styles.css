@@ -1,0 +1,105 @@
+.logo{
+    width: 100px;
+}
+
+.line {
+    height: 3px;
+    background: black;
+}
+
+.line-2 {
+    height: 3px;
+    background: black;
+    width: 400px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.links{
+    color:black;
+    display: block;
+    text-align: center;
+    text-decoration: none; 
+}
+
+a:visited { 
+    text-decoration: none; 
+}
+a:hover { 
+    text-decoration: none; 
+    background-color:gold;
+    font-weight: bold;
+}
+
+a:active { 
+    text-decoration: none; 
+    background-color:gold;
+    font-weight: bold;
+}
+
+.center{
+    text-align:center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.products{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    text-align:center;
+}
+
+.products:hover{
+    background-color:gold;
+}
+
+.product-images{
+    width: 150px;
+    border: 2px solid black;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.cart-product-images{
+    width: 100px;
+    display: block;
+    border: 2px solid black;
+}
+
+.roll-name{
+    text-decoration: underline;
+}
+
+.roll-name:hover{
+    font-weight: bold;
+}
+
+.remove{
+    color:black;
+    font-weight: bold;
+    text-align:center;
+    font-size:small;
+}
+
+.price{
+    font-size:large;
+}
+
+button{
+    background-color:yellow;
+    border: 2px solid black;
+    text-align:center;
+}
+
+.product-detail{
+    text-align: center;
+}
+
+.product-detail-image{
+    width: 250px;
+    border: 2px solid black;
+    margin-left:auto;
+    margin-right:auto;
+}
