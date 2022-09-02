@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <meta charset="UTF-8">
-  <head>
+  
+<head>
+    <!-- Creating the web page name and linking the style sheet -->
+    <meta charset="UTF-8">
     <title>Bun Bun Bake Shop</title>
-    <link rel="stylesheet" href="styles.css">
-    <img class="logo" src="assets/logo-01.svg">
-    <div class="line"></div>
-  </head>
-  <body>
-    <a href="./index.html" class="links">PRODUCTS</a>
-    <a href="./cart.html" class="links">CART</a>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
 
+<body>
+    <!-- logo top left corner -->
+    <a href="./index.html"><img class="logo" src="assets/logo-01.svg" alt="logo"></a>
+    <!-- divider line -->
+    <div class="line"></div>
+    <!-- menu links -->
+    <a href="./index.html" class="links active">PRODUCTS</a>
+    <a href="./cart.html" class="links ">CART</a>
+    <!-- top centered sentance  -->
     <p class="center">
         Original cinnamon rolls
     </p>
-
+    <!-- container for the product selected  -->
     <div class="product-detail">
-        <img class="product-detail-image" src="assets/original-cinnamon-roll.jpg">
+        <!-- image of product  -->
+        <img class="product-detail-image" src="assets/original-cinnamon-roll.jpg" alt="image of original cinnamon roll">
         <div class="details">
+            <!-- instructions on how to customize  -->
             <p>Customize our delicious.<br>hand-made cinammon roll to<br>your liking! </p>
-        
-      
+            <!-- choose a glazing option through the dropdown  -->
             <label for="glaze">Glazing:</label><br>
             <select name="glaze" id="glaze">
                 <option value="Keep-original">Keep original</option>
@@ -28,25 +35,22 @@
                 <option value="Vanilla-milk">Vanilla milk</option>
                 <option value="Double-chocolate">Double chocolate</option>
             </select>
-        
-        <br><br>
-
-        <label for="pack-size">Pack size:</label> <br>
-        <select name="pack-size" id="pack-size">
-            <option value="1">1</option>
-            <option value="3">3</option>
-            <option value="6">6</option>
-            <option value="12">12</option>
-        </select>
+            <br><br>
+            <!-- choose a pack size option through the dropdown  -->
+            <label for="pack-size">Pack size:</label> <br>
+            <select name="pack-size" id="pack-size">
+                <option value="1">1</option>
+                <option value="3">3</option>
+                <option value="6">6</option>
+                <option value="12">12</option>
+            </select>
         </div>
         <br><br>
-
-        
+        <!-- price of product and button to add to cart  -->
         <div class="container">
             <p id="inline">$2.49</p>
             <button type="button">Add to Cart</button>
         </div>
     </div>
-
-  </body>
- </html>
+</body>
+</html>

@@ -1,36 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <meta charset="UTF-8">
-  <head>
+  
+<head>
+    <!-- Creating the web page name and linking the style sheet -->
+    <meta charset="UTF-8">
     <title>Bun Bun Bake Shop</title>
-    <link rel="stylesheet" href="styles.css">
-    <img class="logo" src="assets/logo-01.svg">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <!-- logo top left corner -->
+    <a href="./index.html"><img class="logo" src="assets/logo-01.svg" alt="logo"></a>
+    <!-- divider line -->
     <div class="line"></div>
-  </head>
-  <body>
+    <!-- menu links -->
     <a href="./index.html" class="links">PRODUCTS</a>
-    <a href="./cart.html" class="links">CART</a>
+    <a href="./cart.html" class="links active">CART</a>
+    <!-- top centered sentance  -->
     <p class="center">Shopping Cart</p>
-
-    <div class="products">
-        <img class="cart-product-images" src="assets/original-cinnamon-roll.jpg">
+    <!-- list of items in the shopping cart containing an image, name, glaze option, pack size, price and option to remove  -->
+    <div class="products-cart">
+        <img class="cart-product-images" src="assets/original-cinnamon-roll.jpg" alt="image of original cinnamon roll">
         <a href="#" class="remove">Remove</a>
         <p>Original Cinnamon Roll<br>Glazing: Keep original<br>Pack Size: 1 </p>
         <p class="price">$2.49</p>
     </div>
-
-    <div class="products">
-        <img class="cart-product-images" src="assets/double-chocolate-cinnamon-roll.jpg">
+    <div class="products-cart">
+        <img class="cart-product-images" src="assets/double-chocolate-cinnamon-roll.jpg" alt="image of double chocolate cinnamon roll">
         <a href="#" class="remove">Remove</a>
         <p>Double-chocolate cinnamon roll<br>Glazing: Sugar milk<br>Pack Size: 6 </p>
         <p class="price">$27.45</p>
     </div>
-
+    <!-- divider line  -->
     <div class="line-2"></div>
+    <!-- total price of items in cart and button to checkout  -->
     <div class="center">
         <p>Total: $29.94</p>
         <button type="button" class="checkout">Checkout</button>
     </div>
 
-  </body>
+</body>
 </html>

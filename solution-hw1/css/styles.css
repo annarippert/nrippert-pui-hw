@@ -1,13 +1,17 @@
+/* Style sheet for HW1 */
+
+/* LOGO */
 .logo{
     width: 200px;
 }
 
-.line {
+/* LINE TYPES */
+.line { /* line at the top */
     height: 3px;
     background: black;
 }
 
-.line-2 {
+.line-2 { /* shorter line on the cart page */
     height: 3px;
     background: black;
     width: 400px;
@@ -15,18 +19,18 @@
     margin-right:auto;
 }
 
-.links{
+/* LINKS */
+.links{ /* all links */
     color:black;
     display: block;
     text-align: center;
     text-decoration: none; 
-    
 }
 
-a:visited { 
+.links:visited { /* visited links style */
     text-decoration: none; 
 }
-a:hover { 
+.links:hover { /* hover over links style */
     text-decoration: none; 
     background-color:yellow;
     font-weight: bold;
@@ -35,40 +39,50 @@ a:hover {
     margin-right:auto;
 }
 
-a:active { 
-    text-decoration: none; 
+.active { /* style when link is active */
     background-color:yellow;
     font-weight: bold;
+    width:200px;
+    margin-left:auto;
+    margin-right:auto;
 }
 
-.center{
+.center{ /* class to center elements */
     text-align:center;
     margin-left: auto;
     margin-right: auto;
     font-size:larger;
 }
 
-.products{
+.products{ /* style for the containers for the products on the gallary page */
     margin-left: auto;
     margin-right: auto;
-    width: 200px;
+    width: 150px;
     text-align:center;
     padding: 5px;
 }
 
-.products:hover{
+.products-cart{ /* style for the products on the cart page */
+    margin-left: auto;
+    margin-right: auto;
+    width: 210px;
+    text-align:center;
+    padding: 5px;
+}
+
+.products:hover{  /* hover style when going over the products */
     background-color:yellow;
     font-weight:bold;
 }
 
-.product-images{
+.product-images{ /* style for the product images on the gallary page */
     width: 150px;
     border: 2px solid black;
     margin-left:auto;
     margin-right:auto;
 }
 
-.cart-product-images{
+.cart-product-images{ /* style for the product images on the cart page */
     width: 100px;
     display: block;
     margin-left:auto;
@@ -76,35 +90,36 @@ a:active {
     border: 2px solid black;
 }
 
-.roll-name{
+.roll-name{ /* style for the names of the products on the cart page */
     text-decoration: underline;
     text-align:left;
     color:black;
     width: 150px;
+    
 }
-.roll-price{
+.roll-price{ /* style for the price of the products on the cart page */
     text-align:left;
     color:black;
 }
 
 
-.roll-name:hover{
+.roll-name:hover{ /* style when you hover over the names */
     font-weight: bold;
     color:black;
 }
 
-.remove{
+.remove{ /* Cart button to remove item */
     color:black;
     font-weight: bold;
     text-align:center;
     font-size:small;
 }
 
-.price{
+.price{ /* style for price font */
     font-size:large;
 }
 
-.checkout, button{
+.checkout, button{ /* style for the yellow buttons */
     background-color:yellow;
     border: 2px solid black;
     margin-left:auto;
@@ -112,33 +127,33 @@ a:active {
     font-weight:bold;
 }
 
-.product-detail{
+.product-detail{ /* style for the product details in the containers */
     text-align: center;
     margin-left:auto;
     margin-right:auto;
-    width: 280px;
+    width: 250px;
 }
 
-.product-detail-image{
+.product-detail-image{ /* style for the images of the product */
     width: 250px;
     border: 2px solid black;
 }
 
-.details{
-    padding: 15px;
+.details{ /* style for the text under the product images */
+    padding-left: 25px;
     text-align:left;
 }
 
-#pack-size, #glaze{
+#pack-size, #glaze{ /* style for the dropdowns */
     width:180px;
 }
 
-#inline{
+#inline{ /* keep elements on one line */
     display:inline;
     text-align:center;
 }
 
-.container{
+.container{ /* style container to keep elements in line */
     width:200px;
     font-weight:bold;
     word-spacing:10px;
