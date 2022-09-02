@@ -1,5 +1,5 @@
 .logo{
-    width: 100px;
+    width: 200px;
 }
 
 .line {
@@ -41,18 +41,20 @@ a:active {
     text-align:center;
     margin-left: auto;
     margin-right: auto;
+    font-size:larger;
 }
 
 .products{
-    display: block;
     margin-left: auto;
     margin-right: auto;
     width: 200px;
     text-align:center;
+    padding: 5px;
 }
 
 .products:hover{
-    background-color:gold;
+    background-color:yellow;
+    font-weight:bold;
 }
 
 .product-images{
@@ -70,10 +72,19 @@ a:active {
 
 .roll-name{
     text-decoration: underline;
+    text-align:left;
+    color:black;
+    width: 150px;
 }
+.roll-price{
+    text-align:left;
+    color:black;
+}
+
 
 .roll-name:hover{
     font-weight: bold;
+    color:black;
 }
 
 .remove{
@@ -91,15 +102,40 @@ button{
     background-color:yellow;
     border: 2px solid black;
     text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+    font-weight:bold;
+    height: 30px;
 }
 
 .product-detail{
     text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+    width: 280px;
 }
 
 .product-detail-image{
     width: 250px;
     border: 2px solid black;
-    margin-left:auto;
-    margin-right:auto;
+}
+
+.details{
+    padding: 15px;
+    text-align:left;
+}
+
+#pack-size, #glaze{
+    width:180px;
+}
+
+#inline{
+    display:inline;
+    text-align:center;
+}
+
+.container{
+    width:200px;
+    font-weight:bold;
+    word-spacing:10px;
 }
