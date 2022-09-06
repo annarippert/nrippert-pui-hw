@@ -20,6 +20,7 @@
 }
 
 /* LINKS */
+
 .links{ /* all links */
     color:black;
     display: block;
@@ -30,6 +31,7 @@
 .links:visited { /* visited links style */
     text-decoration: none; 
 }
+
 .links:hover { /* hover over links style */
     text-decoration: none; 
     background-color:yellow;
@@ -47,12 +49,7 @@
     margin-right:auto;
 }
 
-.center{ /* class to center elements */
-    text-align:center;
-    margin-left: auto;
-    margin-right: auto;
-    font-size:larger;
-}
+/* STYLE FOR GALLARY PAGE */
 
 .products{ /* style for the containers for the products on the gallary page */
     margin-left: auto;
@@ -62,12 +59,11 @@
     padding: 5px;
 }
 
-.products-cart{ /* style for the products on the cart page */
+.center{ /* class to center elements */
+    text-align:center;
     margin-left: auto;
     margin-right: auto;
-    width: 210px;
-    text-align:center;
-    padding: 5px;
+    font-size:larger;
 }
 
 .products:hover{  /* hover style when going over the products */
@@ -80,6 +76,16 @@
     border: 2px solid black;
     margin-left:auto;
     margin-right:auto;
+}
+
+/* STYLE FOR CART PAGE */
+
+.products-cart{ /* style for the products on the cart page */
+    margin-left: auto;
+    margin-right: auto;
+    width: 210px;
+    text-align:center;
+    padding: 5px;
 }
 
 .cart-product-images{ /* style for the product images on the cart page */
@@ -126,6 +132,8 @@
     margin-right:auto;
     font-weight:bold;
 }
+
+/* STYLE FOR PRODUCT DETAILS PAGE */
 
 .product-detail{ /* style for the product details in the containers */
     text-align: center;
