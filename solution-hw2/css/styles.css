@@ -1,0 +1,207 @@
+/* Style sheet for HW1 */
+
+/* LOGO */
+.logo{
+    width: 250px;
+}
+
+.line { /* line at the top */
+    background-color:black;
+    height:3px;
+}
+
+.header {
+    width: 50%;
+    display:flex;
+  }
+
+/* LINE TYPES */
+
+
+.line-2 { /* shorter line on the cart page */
+    height: 3px;
+    background: black;
+    width: 400px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+/* LINKS */
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-end;
+}
+.links{ /* all links */
+    color:black;
+    display: block;
+    text-decoration: none; 
+    padding: 2px 40px;
+}
+
+.links:visited { /* visited links style */
+    text-decoration: none; 
+}
+
+.links:hover { /* hover over links style */
+    text-decoration: none; 
+    background-color:yellow;
+    font-weight: bold;
+    width:fit-content;
+}
+
+.active { /* style when link is active */
+    background-color:yellow;
+    font-weight: bold;
+    width:fit-content;
+}
+
+/* STYLE FOR GALLARY PAGE */
+.flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+.products{ /* style for the containers for the products on the gallary page */
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+    padding: 5px;
+}
+
+.center{ /* class to center elements */
+    text-align:center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size:larger;
+}
+
+.products:hover{  /* hover style when going over the products */
+    background-color:yellow;
+    font-weight:bold;
+    width:200px;
+}
+
+.product-images{ /* style for the product images on the gallary page */
+    width: 200px;
+    border: 2px solid black;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+/* STYLE FOR CART PAGE */
+
+.products-cart{ /* style for the products on the cart page */
+    margin-left: auto;
+    margin-right: auto;
+    width: 210px;
+    text-align:center;
+    padding: 5px;
+}
+
+.cart-product-images{ /* style for the product images on the cart page */
+    width: 100px;
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+    border: 2px solid black;
+}
+
+.roll-name{ /* style for the names of the products on the cart page */
+    text-decoration: underline;
+    text-align:left;
+    color:black;
+    width: 150px;
+    
+}
+.roll-price{ /* style for the price of the products on the cart page */
+    text-align:left;
+    color:black;
+}
+
+
+.roll-name:hover{ /* style when you hover over the names */
+    font-weight: bold;
+    color:black;
+}
+
+.remove{ /* Cart button to remove item */
+    color:black;
+    font-weight: bold;
+    text-align:center;
+    font-size:small;
+}
+
+.price{ /* style for price font */
+    font-size:large;
+}
+
+.checkout, button{ /* style for the yellow buttons */
+    background-color:yellow;
+    border: 2px solid black;
+    margin-left:auto;
+    margin-right:auto;
+    font-weight:bold;
+}
+
+/* STYLE FOR PRODUCT DETAILS PAGE */
+
+.product-detail{ /* style for the product details in the containers */
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+    width: 250px;
+}
+
+.product-detail-image{ /* style for the images of the product */
+    width: 250px;
+    border: 2px solid black;
+}
+
+.details{ /* style for the text under the product images */
+    padding-left: 25px;
+    text-align:left;
+}
+
+#pack-size, #glaze{ /* style for the dropdowns */
+    width:180px;
+}
+
+#inline{ /* keep elements on one line */
+    display:inline;
+    text-align:center;
+}
+
+.container{ /* style container to keep elements in line */
+    width:200px;
+    font-weight:bold;
+    word-spacing:10px;
+}
+
+.flex-container-header {
+    display: flex;
+    align-self: center;
+    justify-content: flex-end;
+    align-content: space-between;
+    padding-bottom:25px;
+  }
+
+.side{
+    width:100%;
+    align-self: center;
+    padding-left:20px;
+}
+
+.menu{
+    display:flex;
+    justify-content: flex-end;
+    align-content: space-between; 
+    align-items: flex-start;
+    align-self: flex-start;
+    padding-bottom:15px;
+}
+
+.heading{
+    font-weight:lighter;
+    padding-top:20px;
+}
