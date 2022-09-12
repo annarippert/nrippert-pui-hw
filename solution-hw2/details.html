@@ -9,17 +9,19 @@
 </head>
 
 <body>
-    <!-- logo top left corner -->
-    <a href="./index.html"><img class="logo" src="assets/logo-01.svg" alt="logo"></a>
-    <!-- divider line -->
-    <div class="line"></div>
-    <!-- menu links -->
-    <a href="./index.html" class="links active">PRODUCTS</a>
-    <a href="./cart.html" class="links ">CART</a>
-    <!-- top centered sentance  -->
-    <p class="center">
-        Original cinnamon rolls
-    </p>
+        <!-- header information -->
+        <div class="flex-container-header">
+            <div class="logo-style"><a href="./index.html"><img class="logo" src="assets/logo-01.svg" alt="logo"></a></div>
+            <div class="side">
+              <div class="menu">
+                <a href="./index.html" class="links active">PRODUCTS</a>
+                <a href="./cart.html" class="links">CART</a>
+              </div>
+              <div class="line"></div>
+              <div><h2 class="heading">Original cinnamon rolls</h2></div>
+            </div>
+          </div>
+
     <!-- container for the product selected  -->
     <div class="product-detail">
         <!-- image of product  -->
@@ -27,6 +29,7 @@
         <div class="details">
             <!-- instructions on how to customize  -->
             <p>Customize our delicious.<br>hand-made cinammon roll to<br>your liking! </p>
+            <br><br>
             <!-- choose a glazing option through the dropdown  -->
             <label for="glaze">Glazing:</label><br>
             <select name="glaze" id="glaze">
@@ -44,13 +47,15 @@
                 <option value="6">6</option>
                 <option value="12">12</option>
             </select>
-        </div>
-        <br><br>
+
+            <br><br><br><br>
         <!-- price of product and button to add to cart  -->
         <div class="container">
             <p id="inline">$2.49</p>
-            <button type="button">Add to Cart</button>
+            <button type="button" class="add-to-cart-button">Add to Cart</button>
         </div>
+        </div>
+        
     </div>
 </body>
 </html>

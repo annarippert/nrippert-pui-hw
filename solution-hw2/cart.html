@@ -8,28 +8,52 @@
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-    <!-- logo top left corner -->
-    <a href="./index.html"><img class="logo" src="assets/logo-01.svg" alt="logo"></a>
-    <!-- divider line -->
-    <div class="line"></div>
-    <!-- menu links -->
-    <a href="./index.html" class="links">PRODUCTS</a>
-    <a href="./cart.html" class="links active">CART</a>
-    <!-- top centered sentance  -->
-    <p class="center">Shopping Cart</p>
-    <!-- list of items in the shopping cart containing an image, name, glaze option, pack size, price and option to remove  -->
-    <div class="products-cart">
-        <img class="cart-product-images" src="assets/original-cinnamon-roll.jpg" alt="image of original cinnamon roll">
-        <a href="#" class="remove">Remove</a>
-        <p>Original Cinnamon Roll<br>Glazing: Keep original<br>Pack Size: 1 </p>
-        <p class="price">$2.49</p>
+    <!-- header information -->
+    <div class="flex-container-header">
+        <div class="logo-style"><a href="./index.html"><img class="logo" src="assets/logo-01.svg" alt="logo"></a></div>
+        <div class="side">
+          <div class="menu">
+            <a href="./index.html" class="links active">PRODUCTS</a>
+            <a href="./cart.html" class="links">CART</a>
+          </div>
+          <div class="line"></div>
+          <div><h2 class="heading">Shopping Cart</h2></div>
+        </div>
+      </div>
+
+
+
+    <div class="cart-flex-container">
+        <div>
+            <img class="cart-product-images" src="assets/original-cinnamon-roll.jpg" alt="image of original cinnamon roll">
+            <a href="#" class="remove">Remove</a>
+        </div>
+        <div class="cart-text">
+            <p>Original Cinnamon Roll</p>
+            <p>Glazing: Keep original</p>
+            <p>Pack Size: 1</p>
+        </div>
+        <div>
+            <p class="roll-price">$ 2.49</p>
+        </div>
     </div>
-    <div class="products-cart">
-        <img class="cart-product-images" src="assets/double-chocolate-cinnamon-roll.jpg" alt="image of double chocolate cinnamon roll">
-        <a href="#" class="remove">Remove</a>
-        <p>Double-chocolate cinnamon roll<br>Glazing: Sugar milk<br>Pack Size: 6 </p>
-        <p class="price">$27.45</p>
+
+    
+    <div class="cart-flex-container">
+        <div>
+            <img class="cart-product-images" src="assets/double-chocolate-cinnamon-roll.jpg" alt="image of double chocolate cinnamon roll">
+            <a href="#" class="remove">Remove</a>
+        </div>
+        <div class="cart-text">
+            <p>Double-chocolate cinnamon roll</p>
+            <p>Glazing: Sugar milk</p>
+            <p>Pack Size: 6</p>
+        </div>
+        <div>
+            <p class="roll-price">$ 27.45</p>
+        </div>
     </div>
+    <br>
     <!-- divider line  -->
     <div class="line-2"></div>
     <!-- total price of items in cart and button to checkout  -->
