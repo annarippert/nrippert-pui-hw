@@ -35,9 +35,9 @@ nav{
 }
 .links{ /* all links */
     color:black;
-    display: block;
     text-decoration: none; 
-    padding: 2px 40px;
+    margin-left:30px;
+   
 }
 
 .links:visited { /* visited links style */
@@ -45,10 +45,11 @@ nav{
 }
 
 .links:hover { /* hover over links style */
+    width:fit-content;
     text-decoration: none; 
     background-color:yellow;
     font-weight: bold;
-    width:fit-content;
+    
 }
 
 .active { /* style when link is active */
@@ -58,6 +59,18 @@ nav{
 }
 
 /* STYLE FOR GALLARY PAGE */
+
+.gallary-flex-container{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content:space-around;
+}
+
+.gallary-flex-container>div:hover{
+    background-color: yellow;
+    }
+
+
 .flex-container {
     display: flex;
     flex-wrap: nowrap;
@@ -67,8 +80,12 @@ nav{
     margin-right: auto;
     width: 150px;
     padding: 5px;
+    background-color:red;
 }
 
+.gallary-prices{
+    margin: 5px 5px 5px 5px;
+}
 .center{ /* class to center elements */
     text-align:center;
     margin-left: auto;
@@ -79,14 +96,16 @@ nav{
 .products:hover{  /* hover style when going over the products */
     background-color:yellow;
     font-weight:bold;
-    width:200px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
 }
 
 .product-images{ /* style for the product images on the gallary page */
     width: 200px;
     border: 2px solid black;
-    margin-left:auto;
-    margin-right:auto;
+    margin: 5px 5px 5px 5px;
 }
 
 /* STYLE FOR CART PAGE */
@@ -94,6 +113,14 @@ nav{
 .cart-flex-container{
     display:flex;
     justify-content: flex-end;
+    flex-grow: 1;
+    margin-left:270px;
+    flex-shrink:0;
+}
+
+.empty{
+    flex-grow:0;
+    flex-shrink: 1;
 }
 
 .products-cart{ /* style for the products on the cart page */
@@ -105,28 +132,33 @@ nav{
 }
 
 .cart-text{
-    line-height:10px;
-    width:400px;
+    line-height:8px;
     padding-left:20px;
+    flex-grow: 1;
+    flex-shrink:0;
+    align-self: center;
 }
 
 .cart-product-images{ /* style for the product images on the cart page */
     width: 100px;
     display: block;
     border: 2px solid black;
+    flex-shrink:0;
 }
 
 .roll-name{ /* style for the names of the products on the cart page */
     text-decoration: underline;
     text-align:left;
     color:black;
-    width: 150px;
+    margin: 5px 5px 5px 5px;
     
 }
 .roll-price{ /* style for the price of the products on the cart page */
     text-align:right;
     color:black;
     padding: 2px 40px;
+    font-size:larger;
+    flex-shrink:0;
 }
 
 
@@ -135,11 +167,19 @@ nav{
     color:black;
 }
 
+.total{
+    padding: 2px;
+    font-size:larger;
+    margin-left: 50px;
+}
+
 .remove{ /* Cart button to remove item */
     color:black;
     font-weight: bold;
     text-align:center;
-    font-size:small;
+    font-size:x-small;
+    margin-left:270px;
+    flex-shrink:0;
 }
 
 .price{ /* style for price font */
@@ -156,6 +196,14 @@ nav{
     font-weight:bold;
     justify-content: flex-end;
 
+}
+
+.checkout-button{
+    justify-content: flex-end;
+    align-content:space-between;
+    margin-right:40px;
+    font-size:large;
+    
 }
 
 /* STYLE FOR PRODUCT DETAILS PAGE */
