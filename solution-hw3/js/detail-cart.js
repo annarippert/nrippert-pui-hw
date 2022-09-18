@@ -1,3 +1,4 @@
+//object for glazing
 let glazing = {
     original: 0,
     sugarMilk: 0,
@@ -5,6 +6,7 @@ let glazing = {
     doubleChocolate: 1.50
 }
 
+//object for pack size
 let packSize ={
     one: 1,
     three: 3,
@@ -12,13 +14,18 @@ let packSize ={
     twelve: 10
 }
 
+//set the defaults
 let thisGlazingPrice = glazing.original;
 let thisPackSizePrice = packSize.one;
+//find the price we want to be changing
+let basePrice = document.getElementById("inline").innerHTML;
+//make sure the price is a float
+basePrice = parseFloat(basePrice);
 
 function glazingChange(element) {
     // get value of selected glazing option
     const priceChange = element.value;
-    console.log(priceChange);
+    //if statements to get the price adaption
     if (priceChange=="Sugar-milk") {
         thisGlazingPrice = glazing.sugarMilk;
     }
@@ -31,11 +38,15 @@ function glazingChange(element) {
     else if (priceChange=="Vanilla-milk"){
         thisGlazingPrice = glazing.vanillaMilk;
     }
+    //call the compute total to compute the new price with the new selected options
+    computeTotal();
     return thisGlazingPrice;
   }
 
 function packSizeChange(element) {
+    //get the current selected option
     const packSizeChange = element.value;
+    //if statements to get the price adaption
     if (packSizeChange == 1) {
         thisPackSizePrice = packSize.one;
     }
@@ -48,23 +59,16 @@ function packSizeChange(element) {
     else if(packSizeChange == 12){
         thisPackSizePrice = packSize.twelve;
     }
+    //call the compute total to compute the new price with the new selected options
+    computeTotal();
     return thisPackSizePrice;
 }
 
- 
+//computes the total price using the glazing price, the pack size and the base price
 function computeTotal(){
-    console.log("here");
-    let basePrice = document.getElementById("inline").innerHTML;
     basePrice = parseFloat(basePrice);
-    thisGlazingPrice = parseFloat(thisGlazingPrice);
-    thisPackSizePrice = parseFloat(thisPackSizePrice);
-
     let updatedPrice = (basePrice+thisGlazingPrice)*thisPackSizePrice;
-    console.log("updated: " + updatedPrice);
-    console.log("pack size price: "+ thisPackSizePrice);
-    console.log("glazing price: "+ thisGlazingPrice);
-    console.log("base price: " + basePrice);
+    //change the text to the updated price
     document.getElementById("inline").innerHTML = updatedPrice.toFixed(2);
-    return updatedPrice;
-  }
+}
   
