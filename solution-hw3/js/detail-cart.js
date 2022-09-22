@@ -14,61 +14,65 @@ let packSize ={
     twelve: 10
 }
 
-//set the defaults
+// set the defaults
 let thisGlazingPrice = glazing.original;
 let thisPackSizePrice = packSize.one;
-//find the price we want to be changing
+// find the price we want to be changing
 let basePrice = document.getElementById("inline").innerHTML;
-//make sure the price is a float
+// make sure the price is a float
 basePrice = parseFloat(basePrice);
 
+// function will track any time the user makes a change to the glazing
 function glazingChange(element) {
     // get value of selected glazing option
     const priceChange = element.value;
-    //if statements to get the price adaption
+    // if statements to get the price adaption
     if (priceChange=="Sugar-milk") {
         thisGlazingPrice = glazing.sugarMilk;
     }
-    else if (priceChange=="Double-chocolate"){
+    else if (priceChange=="Double-chocolate") {
         thisGlazingPrice = glazing.doubleChocolate;
     }
-    else if (priceChange=="Keep-original"){
+    else if (priceChange=="Keep-original") {
         thisGlazingPrice = glazing.original;
     }
-    else if (priceChange=="Vanilla-milk"){
+    else if (priceChange=="Vanilla-milk") {
         thisGlazingPrice = glazing.vanillaMilk;
     }
-    //call the compute total to compute the new price with the new selected options
+    // call the compute total to compute the new price with the new selected options
     computeTotal();
     return thisGlazingPrice;
   }
 
+  // function will track any time the user makes a change to the pack size
 function packSizeChange(element) {
-    //get the current selected option
+    // get the current selected option
     const packSizeChange = element.value;
-    //if statements to get the price adaption
+    // if statements to get the price adaption
     if (packSizeChange == 1) {
         thisPackSizePrice = packSize.one;
     }
-    else if(packSizeChange == 3){
+    else if(packSizeChange == 3) {
         thisPackSizePrice = packSize.three;
     }
-    else if(packSizeChange == 6){
+    else if(packSizeChange == 6) {
         thisPackSizePrice = packSize.six;
     }
-    else if(packSizeChange == 12){
+    else if(packSizeChange == 12) {
         thisPackSizePrice = packSize.twelve;
     }
-    //call the compute total to compute the new price with the new selected options
+    // call the compute total to compute the new price with the new selected options
     computeTotal();
     return thisPackSizePrice;
 }
 
-//computes the total price using the glazing price, the pack size and the base price
-function computeTotal(){
+// computes the total price using the glazing price, the pack size and the base price
+function computeTotal() {
+    // make sure it is a float
     basePrice = parseFloat(basePrice);
+    // formula for total price
     let updatedPrice = (basePrice+thisGlazingPrice)*thisPackSizePrice;
-    //change the text to the updated price
+    // change the text to the updated price and fix it to two decimal points
     document.getElementById("inline").innerHTML = updatedPrice.toFixed(2);
 }
   
