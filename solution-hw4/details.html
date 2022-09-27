@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <title>Bun Bun Bake Shop</title>
     <link rel="stylesheet" href="./css/styles.css">
- <!--  <script src="js/detail-cart.js" defer></script>--> 
+    <!--<script src="js/detail-cart.js" defer></script>-->
     <script defer src="js/details.js"></script>
 </head>
 
@@ -27,7 +27,7 @@
     <!-- container for the product selected  -->
     <div class="product-detail">
         <!-- image of product  -->
-        <img class="product-detail-image" src="" alt="image of product">
+        <img class="product-detail-image" src="#" alt="image of product">
         <div class="details">
             <!-- instructions on how to customize  -->
             <p id="product-detail-text">Customize our delicious.<br>hand-made cinammon roll to<br>your liking! </p>
@@ -55,7 +55,7 @@
         <div class="container">
             <p id="dollar-sign">$</p>
             <p id="product-detail-price" onload="computeTotal()"></p>
-            <button type="button" class="add-to-cart-button">Add to Cart</button>
+            <button  onclick="addToCart()" type="button" class="add-to-cart-button">Add to Cart</button>
         </div>
         </div>
         

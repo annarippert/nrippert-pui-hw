@@ -1,3 +1,5 @@
+
+// -----------------------------Cart Price----------------------
 //object for glazing
 let glazing = {
     original: 0,
