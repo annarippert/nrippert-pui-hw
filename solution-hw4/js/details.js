@@ -1,15 +1,14 @@
 /*
-UPDATING THE DETAILS PAGE
-file split into x parts
+UPDATING THE DETAILS PAGE HOMEWORK 4
+file split into 5 parts
 1: roll data 
 2: getting query string from the URL
 3: update the contents on the page with the right names/prices
 4: updating the price of cart from hw3 
-5: 
-
+5: inititing the cart and adding to it using a Roll object
 */
 
-
+/* ---------------------------------PART 1: Roll Data------------------------ */
 //data given to us on canvas
 const rolls = {
     "Original": {
@@ -39,7 +38,7 @@ const rolls = {
 };
 
 
-
+/* --------------------PART 2: getting query string from the URL------------- */
 // taken from URL Params Lab code
 //First, we get the query string from the URL. This is the list of parameters
 // that begins with a question mark. (These are known as "search parameters")
@@ -52,10 +51,8 @@ const params = new URLSearchParams(queryString);
 const chosenRoll = params.get('roll')
 
 
-/* ------------------------------------------------------------------------- */
-
+/* -------------------------------PART 3: Update Page------------------------ */
 // Now, we will use the URL parameter to update our page.
-
 // Update the header text
 let headerElement = document.querySelector('.heading');
 headerElement.innerText = chosenRoll + " Cinnamon Roll";
@@ -72,7 +69,7 @@ rollBase.innerText = rolls[chosenRoll].basePrice;
 //console.log("price: " + chosenRoll.basePrice);
 
 
-// -----------------------------Cart Price----------------------
+/* -------------------------------PART 4: Cart Prices------------------------ */
 //object for glazing
 let glazing = {
     original: 0,
@@ -152,7 +149,7 @@ function computeTotal(){
     document.getElementById("product-detail-price").innerHTML = updatedPrice.toFixed(2);
 }
 
-//-------------------------------
+/* -------------------------------PART 5: Cart------------------------------- */
 //initiate an empty cart
 let cart = [];
 
