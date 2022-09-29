@@ -45,7 +45,7 @@ let glazing = {
 let packSize ={
     one: 1,
     three: 3,
-    six:5,
+    six: 5,
     twelve: 10
 }
 
@@ -65,16 +65,16 @@ function glazingChange(element) {
     // get value of selected glazing option
     glazingSelection = element.value;
     //if statements to get the price adaption
-    if (glazingSelection=="Sugar milk") {
+    if (glazingSelection == "Sugar milk") {
         thisGlazingPrice = glazing.sugarMilk;
     }
-    else if (glazingSelection=="Double chocolate"){
+    else if (glazingSelection == "Double chocolate"){
         thisGlazingPrice = glazing.doubleChocolate;
     }
-    else if (glazingSelection=="Keep original"){
+    else if (glazingSelection == "Keep original"){
         thisGlazingPrice = glazing.original;
     }
-    else if (glazingSelection=="Vanilla milk"){
+    else if (glazingSelection == "Vanilla milk"){
         thisGlazingPrice = glazing.vanillaMilk;
     }
     //call the compute total to compute the new price with the new selected options
@@ -107,13 +107,13 @@ function packSizeChange(element) {
 //computes the total price using the glazing price, the pack size and the base price
 function computeTotal(){
     basePrice = parseFloat(basePrice);
-    let updatedPrice = (basePrice+thisGlazingPrice)*thisPackSizePrice;
+    let updatedPrice = (basePrice + thisGlazingPrice) * thisPackSizePrice;
     //change the text to the updated price
     document.getElementById("product-detail-price").innerHTML = updatedPrice.toFixed(2);
 }
 
 /* -------------------------------Create and add to Cart------------------------------- */
-//initiate an empty cart
+//initiate an empty cart array
 let cart = [];
 
 //class to help build our rolls
