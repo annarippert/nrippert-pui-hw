@@ -1,44 +1,7 @@
 /*
 UPDATING THE DETAILS PAGE HOMEWORK 4
-file split into 5 parts
-1: roll data 
-2: getting query string from the URL
-3: update the contents on the page with the right names/prices
-4: updating the price of cart from hw3 
-5: inititing the cart and adding to it using a Roll object
-*/
 
-/* ---------------------------------PART 1: Roll Data------------------------ */
-//data given to us on canvas
-const rolls = {
-    "Original": {
-        "basePrice": 2.49,
-        "imageFile": "original-cinnamon-roll.jpg"
-    },
-    "Apple": {
-        "basePrice": 3.49,
-        "imageFile": "apple-cinnamon-roll.jpg"
-    },
-    "Raisin": {
-        "basePrice": 2.99,
-        "imageFile": "raisin-cinnamon-roll.jpg"
-    },
-    "Walnut": {
-        "basePrice": 3.49,
-        "imageFile": "walnut-cinnamon-roll.jpg"
-    },
-    "Double-Chocolate": {
-        "basePrice": 3.99,
-        "imageFile": "double-chocolate-cinnamon-roll.jpg"
-    },
-    "Strawberry": {
-        "basePrice": 3.99,
-        "imageFile": "strawberry-cinnamon-roll.jpg"
-    }    
-};
-
-
-/* --------------------PART 2: getting query string from the URL------------- */
+/* -------------------- getting query string from the URL------------- */
 // taken from URL Params Lab code
 //First, we get the query string from the URL. This is the list of parameters
 // that begins with a question mark. (These are known as "search parameters")
@@ -51,7 +14,7 @@ const params = new URLSearchParams(queryString);
 const chosenRoll = params.get('roll')
 
 
-/* -------------------------------PART 3: Update Page------------------------ */
+/* ---------------------------Update Page elements------------------------ */
 // Now, we will use the URL parameter to update our page.
 // Update the header text
 let headerElement = document.querySelector('.heading');
@@ -69,7 +32,7 @@ rollBase.innerText = rolls[chosenRoll].basePrice;
 //console.log("price: " + chosenRoll.basePrice);
 
 
-/* -------------------------------PART 4: Cart Prices------------------------ */
+/* --------------------------Cart Prices (same as hw3)------------------------ */
 //object for glazing
 let glazing = {
     original: 0,
@@ -102,22 +65,22 @@ function glazingChange(element) {
     // get value of selected glazing option
     glazingSelection = element.value;
     //if statements to get the price adaption
-    if (glazingSelection=="Sugar-milk") {
+    if (glazingSelection=="Sugar milk") {
         thisGlazingPrice = glazing.sugarMilk;
     }
-    else if (glazingSelection=="Double-chocolate"){
+    else if (glazingSelection=="Double chocolate"){
         thisGlazingPrice = glazing.doubleChocolate;
     }
-    else if (glazingSelection=="Keep-original"){
+    else if (glazingSelection=="Keep original"){
         thisGlazingPrice = glazing.original;
     }
-    else if (glazingSelection=="Vanilla-milk"){
+    else if (glazingSelection=="Vanilla milk"){
         thisGlazingPrice = glazing.vanillaMilk;
     }
     //call the compute total to compute the new price with the new selected options
     computeTotal();
     return thisGlazingPrice;
-  }
+}
 
 //function to help see what the corresponding price is for the pack size
 function packSizeChange(element) {
@@ -149,7 +112,7 @@ function computeTotal(){
     document.getElementById("product-detail-price").innerHTML = updatedPrice.toFixed(2);
 }
 
-/* -------------------------------PART 5: Cart------------------------------- */
+/* -------------------------------Create and add to Cart------------------------------- */
 //initiate an empty cart
 let cart = [];
 
@@ -168,15 +131,8 @@ class Roll {
 function addToCart(){
     let theRoll = new Roll(chosenRoll, glazingSelection, packSizeSelection, basePrice); 
     cart.push(theRoll);
-    printCartItems();
-}
-
-//function prints out all rolls in the cart
-function printCartItems(){
-    console.log("Items in the cart: ")
-    for (let i = 0; i < cart.length; i++){
-        console.log(cart[i]);
-    }
+    //print out the items in the cart
+    console.log(cart);
 }
 
 
