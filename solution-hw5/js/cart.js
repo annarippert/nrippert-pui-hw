@@ -1,5 +1,11 @@
 /* -------------------------------Create and add to Cart------------------------------- */
 //class to help build our rolls
+let glazingTest = {
+    original: 0,
+    sugarMilk: 0,
+    vanillaMilk: 0.50,
+    doubleChocolate: 1.50
+}
 
 class Roll {
     constructor(rollType, rollGlazing, packSize, basePrice, totalPrice) {
@@ -44,14 +50,15 @@ function createElement(roll){
     // add the roll clone to the DOM
     // find the roll parent (#roll-list) and add our roll as its child
     const rollListElement = document.querySelector('#roll-list');
-    rollListElement.prepend(roll.element);
+    rollListElement.prepend(roll.element); 
 
     // populate the roll clone with the actual roll content
     updateElement(roll);
 }
 
-let allRollsPrice = document.querySelector('#total-roll-price').textContent;
 
+
+let allRollsPrice = document.querySelector('#total-roll-price');
 
 function updateElement(roll) {
     const rollImageElement = document.querySelector('.cart-product-images');
@@ -67,35 +74,33 @@ function updateElement(roll) {
     rollPackElement.innerText = "Pack Size: " + roll.size;
 
     const rollPriceElement = document.querySelector('#singular-roll-price');
-    // let total = computeTotalRollPrice(roll.basePrice, roll.size, roll.glazing);
-    // rollPriceElement.innterText = "$ " + total;
-
-    //computing total and adding price to it
+    //computing price adaptions and adding price to it
+    
     let glazingNameSpaceRemoved = roll.glazing.replace(" ", "");
     let glazingLowerCasedFirstLetter = glazingNameSpaceRemoved[0].toLowerCase()+glazingNameSpaceRemoved.slice(1);
-    console.log("lower: " + glazingLowerCasedFirstLetter);
-    
-    let glazingPriceAdaption = glazingObj.glazingLowerCasedFirstLetter;
-    console.log("price: " + glazingPriceAdaption);
-    allRollsPrice = parseFloat(allRollsPrice) + glazingPriceAdaption;
-    allRollsPrice.innerText= "$ " + allRollsPrice ;
+    let glazingPriceAdaption = glazingTest[glazingLowerCasedFirstLetter];
+    let rollTotal = computeTotalRollPrice(roll.basePrice, roll.size, glazingPriceAdaption);
 
+    rollPriceElement.innerText = "$ " + rollTotal;
+
+    //for total;
     
-    // //updating total price with adding rolls price
-    // var onlyDigits = totalPrice.replace(/\D/g, "");
-    // var newTotal = parseInt(onlyDigits) + parseInt(roll.totalPrice);
-    // totalPrice.innerText = "$ " + newTotal
+    var onlyDigitsTotal= allRollsPrice.innerText.replace("$ ", "");
+    let total = (parseFloat(onlyDigitsTotal) + rollTotal).toFixed(2);;
+    allRollsPrice.innerText= "$ " + total;
+    console.log("roll total: " + rollTotal + " cart total: " + onlyDigitsTotal + " together: " + total);
+
 }
 
 function deleteRoll(roll) {
     // remove the roll DOM object from the UI
     roll.element.remove();
     // remove the actual roll object from our set of notecards
-    cart.delete(roll);
+    cart.pop(roll);
     // update total price
-
-    // var onlyDigits = totalPrice.replace(/\D/g, "");
-    // var newTotal = parseInt(onlyDigits) - parseInt(roll.totalPrice);
+    
+     let onlyDigits = allRollsPrice.replace("$ ", "");
+     let newTotal = parseInt(onlyDigits) - parseInt(roll.totalPrice); 
     // totalPrice.innerText = "$ " + newTotal
   }
 
