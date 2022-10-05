@@ -33,8 +33,8 @@ rollBase.innerText = rolls[chosenRoll].basePrice;
 
 
 /* --------------------------Cart Prices (same as hw3)------------------------ */
-//object for glazing
-let glazing = {
+//object for glazingObj
+let glazingObj = {
     original: 0,
     sugarMilk: 0,
     vanillaMilk: 0.50,
@@ -50,8 +50,8 @@ let packSize ={
 }
 
 //set the defaults
-let thisGlazingPrice = glazing.original;
-let glazingSelection = "Keep-original";
+let thisglazingObjPrice = glazingObj.original;
+let glazingObjSelection = "Keep-original";
 let packSizeSelection = 1;
 let thisPackSizePrice = packSize.one;
 //find the price we want to be changing
@@ -60,26 +60,26 @@ let basePrice = rolls[chosenRoll].basePrice;
 basePrice = parseFloat(basePrice);
 
 
-//function to help see what the corresponding price is for the glazing
-function glazingChange(element) {
-    // get value of selected glazing option
-    glazingSelection = element.value;
+//function to help see what the corresponding price is for the glazingObj
+function glazingObjChange(element) {
+    // get value of selected glazingObj option
+    glazingObjSelection = element.value;
     //if statements to get the price adaption
-    if (glazingSelection == "Sugar milk") {
-        thisGlazingPrice = glazing.sugarMilk;
+    if (glazingObjSelection == "Sugar milk") {
+        thisglazingObjPrice = glazingObj.sugarMilk;
     }
-    else if (glazingSelection == "Double chocolate"){
-        thisGlazingPrice = glazing.doubleChocolate;
+    else if (glazingObjSelection == "Double chocolate"){
+        thisglazingObjPrice = glazingObj.doubleChocolate;
     }
-    else if (glazingSelection == "Original"){
-        thisGlazingPrice = glazing.original;
+    else if (glazingObjSelection == "Original"){
+        thisglazingObjPrice = glazingObj.original;
     }
-    else if (glazingSelection == "Vanilla milk"){
-        thisGlazingPrice = glazing.vanillaMilk;
+    else if (glazingObjSelection == "Vanilla milk"){
+        thisglazingObjPrice = glazingObj.vanillaMilk;
     }
     //call the compute total to compute the new price with the new selected options
     computeTotal();
-    return thisGlazingPrice;
+    return thisglazingObjPrice;
 }
 
 //function to help see what the corresponding price is for the pack size
@@ -104,47 +104,25 @@ function packSizeChange(element) {
     return thisPackSizePrice;
 }
 
-//computes the total price using the glazing price, the pack size and the base price
+//computes the total price using the glazingObj price, the pack size and the base price
 function computeTotal(){
     basePrice = parseFloat(basePrice);
-    let updatedPrice = (basePrice + thisGlazingPrice) * thisPackSizePrice;
+    let updatedPrice = (basePrice + thisglazingObjPrice) * thisPackSizePrice;
     //change the text to the updated price
     document.getElementById("product-detail-price").innerHTML = updatedPrice.toFixed(2);
-}
 
-/* -------------------------------Create and add to Cart------------------------------- */
-//initiate an empty cart array
-let cart = [];
-
-//class to help build our rolls
-class Roll {
-    constructor(rollType, rollGlazing, packSize, basePrice) {
-        this.type = rollType;
-        this.glazing =  rollGlazing;
-        this.size = packSize;
-        this.basePrice = basePrice;
-    }
 }
 
 //function is called when the user clicks the "Add to Cart" button
 //Creates a new instance of Roll using the selections the user picked
 function addToCart(){
-    let theRoll = new Roll(chosenRoll, glazingSelection, packSizeSelection, basePrice); 
-    cart.push(theRoll);
-    //print out the items in the cart
-    console.log(cart);
-}
+    // let totalPrice = (basePrice + thisglazingObjPrice) * thisPackSizePrice
+     let theRoll = new Roll(chosenRoll, glazingObjSelection, packSizeSelection, basePrice); 
+     cart.push(theRoll);
+     //print out the items in the cart
+     console.log(cart);
+     return theRoll;
+ }
 
-
-//homework 5
-let originalRoll = new Roll("Original", "Sugar Milk", 1, rolls["Original"].basePrice)
-let walnutRoll = new Roll("Walnut", "Vanilla Milk", 12, rolls["Walnut"].basePrice)
-let raisinRoll = new Roll("Raisin", "Sugar Milk", 3, rolls["Raisin"].basePrice)
-let appleRoll = new Roll("Apple", "Original", 3, rolls["Apple"].basePrice)
-cart.push(originalRoll);
-cart.push(walnutRoll);
-cart.push(raisinRoll);
-cart.push(appleRoll);
-console.log(cart);
 
 

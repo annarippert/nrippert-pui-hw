@@ -161,6 +161,14 @@ nav{
     flex-shrink:0;
 }
 
+#total-roll-price, #singular-roll-price{ /* style for the price of the products on the cart page */
+    text-align:right;
+    color:black;
+    padding: 2px 40px;
+    font-size:larger;
+    flex-shrink:0;
+}
+
 
 .roll-name:hover{ /* style when you hover over the names */
     font-weight: bold;
@@ -276,4 +284,10 @@ nav{
 .heading{
     font-weight:lighter;
     padding-top:20px;
+}
+
+.shopping-cart-heading{
+    font-weight:lighter;
+    padding-top:20px;
+    
 }
