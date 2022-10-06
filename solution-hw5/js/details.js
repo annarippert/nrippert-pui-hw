@@ -2,9 +2,11 @@
 UPDATING THE DETAILS PAGE HOMEWORK 4
 
 /* -------------------- getting query string from the URL------------- */
+
 // taken from URL Params Lab code
 //First, we get the query string from the URL. This is the list of parameters
 // that begins with a question mark. (These are known as "search parameters")
+
 const queryString = window.location.search;
 
 // Then, we use the query string to create a URLSearchParams object:
@@ -17,22 +19,22 @@ const chosenRoll = params.get('roll')
 /* ---------------------------Update Page elements------------------------ */
 // Now, we will use the URL parameter to update our page.
 // Update the header text
+
 let headerElement = document.querySelector('.heading');
 headerElement.innerText = chosenRoll + " Cinnamon Roll";
 
 // Update the image
 const rollImage = document.querySelector('.product-detail-image');
 rollImage.src = './assets/' + rolls[chosenRoll].imageFile;
-//console.log("img: " + rollImage.textContent);
 
 // Update the base price
 const rollBase = document.querySelector('#product-detail-price');
-//console.log("base: " + rollBase.textContent);
 rollBase.innerText = rolls[chosenRoll].basePrice;
-//console.log("price: " + chosenRoll.basePrice);
+
 
 
 /* --------------------------Cart Prices (same as hw3)------------------------ */
+
 //object for glazingObj
 let glazingObj = {
     original: 0,
@@ -41,14 +43,13 @@ let glazingObj = {
     doubleChocolate: 1.50
 }
 
-//object for pack size
+    //object for pack size
 let packSize ={
     one: 1,
     three: 3,
     six: 5,
     twelve: 10
 }
-
 //set the defaults
 let thisglazingObjPrice = glazingObj.original;
 let glazingObjSelection = "Keep-original";
@@ -106,12 +107,26 @@ function packSizeChange(element) {
 
 //computes the total price using the glazingObj price, the pack size and the base price
 function computeTotal(){
-    basePrice = parseFloat(basePrice);
-    let updatedPrice = (basePrice + thisglazingObjPrice) * thisPackSizePrice;
-    //change the text to the updated price
-    document.getElementById("product-detail-price").innerHTML = updatedPrice.toFixed(2);
+newBasePrice = parseFloat(basePrice);
+let updatedPrice = (newBasePrice + thisglazingObjPrice) * thisPackSizePrice;
+//change the text to the updated price
+document.getElementById("product-detail-price").innerHTML = updatedPrice.toFixed(2);
 
 }
+
+class Roll {
+    constructor(rollType, rollGlazing, packSize, basePrice, totalPrice) {
+        this.type = rollType;
+        this.glazing =  rollGlazing;
+        this.size = packSize;
+        this.basePrice = basePrice;
+        this.totalPrice = totalPrice;
+        this.element = null;
+    }
+}
+
+//initiate an empty cart array
+let cart = [];
 
 //function is called when the user clicks the "Add to Cart" button
 //Creates a new instance of Roll using the selections the user picked
@@ -122,7 +137,7 @@ function addToCart(){
      //print out the items in the cart
      console.log(cart);
      return theRoll;
- }
+}
 
 
 

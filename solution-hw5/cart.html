@@ -7,7 +7,6 @@
     <title>Bun Bun Bake Shop</title>
     <link rel="stylesheet" href="./css/styles.css">
     <script defer src="js/rollsData.js"></script>
-    <script defer src="js/details.js"></script>
     <script defer src="js/cart.js"></script>
   
 </head>
@@ -26,6 +25,7 @@
       </div>
 
       <div id="roll-list">
+        <!-- createing a template to be used for rolls-->
         <template id="roll-template">
             <div class="roll">
                 <div class="cart-flex-container">
@@ -34,31 +34,27 @@
                         <img class="cart-product-images" src="#" alt="image of roll">
                     </div>
                     <div class="cart-text">
+                         <!--roll detail-->
                         <p id = "title-roll-name">Original Cinnamon Roll</p>
                         <p id = "glazing-name">Glazing: Keep original</p>
                         <p id = "pack-size-name">Pack Size: 1</p>
                     </div>
                     <div>
+                         <!--price-->
                         <p id="singular-roll-price">$ 0</p>
                     </div>
                 </div>
                 <div>
+                    <!--remove button-->
                     <a href="#" class="remove">Remove</a>
                     
                 </div>
                 <br>  
-            </div>
-            
-        </template>
-       
+            </div>      
+        </template>  
     </div>
-    
-
 
     <br>    
-    
-
-
 
 
     <!-- divider line  -->
