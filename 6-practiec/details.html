@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <!-- Creating the web page name and linking the style sheet -->
+    <meta charset="UTF-8">
+    <title>Bun Bun Bake Shop</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <!--linking the js files-->
+    <script src="js/rollsData.js"></script>
+    <script defer src="js/details.js"></script>
+</head>
+
+<body>
+        <!-- header information -->
+        <div class="flex-container-header">
+            <div class="logo-style"><a href="./index.html"><img class="logo" src="assets/logo-01.svg" alt="logo"></a></div>
+            <div class="side">
+              <div class="menu">
+                <a href="./index.html" class="links active">PRODUCTS</a>
+                <a href="./cart.html" class="links">CART</a>
+              </div>
+              <div class="line"></div>
+              <div><h2 class="heading">Original cinnamon rolls</h2></div>
+            </div>
+          </div>
+
+    <!-- container for the product selected  -->
+    <div class="product-detail">
+        <!-- image of product  -->
+        <img class="product-detail-image" src="#" alt="image of product">
+        <div class="details">
+            <!-- instructions on how to customize  -->
+            <p id="product-detail-text">Customize our delicious.<br>hand-made cinammon roll to<br>your liking! </p>
+            <br><br>
+            <!-- choose a glazing option through the dropdown  -->
+            <label for="glaze">Glazing:</label><br>
+            <select name="glaze" id="glaze" onchange="glazingObjChange(this)">
+                <option value="Original">Keep original</option>
+                <option value="Sugar milk">Sugar milk</option>
+                <option value="Vanilla milk">Vanilla milk</option>
+                <option value="Double chocolate">Double chocolate</option>
+            </select>
+            <br><br>
+            <!-- choose a pack size option through the dropdown  -->
+            <label for="pack-size">Pack size:</label> <br>
+            <select name="pack-size" id="pack-size" onchange="packSizeChange(this)">
+                <option value="1">1</option>
+                <option value="3">3</option>
+                <option value="6">6</option>
+                <option value="12">12</option>
+            </select>
+
+            <br><br><br><br>
+        <!-- price of product and button to add to cart  <p id="inline" onload="computeTotal()" onchange="computeTotal()">2.49</p>-->
+        <div class="container">
+            <p id="dollar-sign">$</p>
+            <p id="product-detail-price" onload="computeTotal()"></p>
+            <button  onclick="addToCart()" type="button" class="add-to-cart-button">Add to Cart</button>
+        </div>
+        </div>
+        
+    </div>
+</body>
+</html>
