@@ -1,39 +1,7 @@
-/*
-UPDATING THE DETAILS PAGE HOMEWORK 4
-
-/* -------------------- getting query string from the URL------------- */
 
 // taken from URL Params Lab code
 //First, we get the query string from the URL. This is the list of parameters
 // that begins with a question mark. (These are known as "search parameters")
-
-//data given to us on canvas
-const rolls = {
-    "Original": {
-        "basePrice": 2.49,
-        "imageFile": "original-cinnamon-roll.jpg"
-    },
-    "Apple": {
-        "basePrice": 3.49,
-        "imageFile": "apple-cinnamon-roll.jpg"
-    },
-    "Raisin": {
-        "basePrice": 2.99,
-        "imageFile": "raisin-cinnamon-roll.jpg"
-    },
-    "Walnut": {
-        "basePrice": 3.49,
-        "imageFile": "walnut-cinnamon-roll.jpg"
-    },
-    "Double-Chocolate": {
-        "basePrice": 3.99,
-        "imageFile": "double-chocolate-cinnamon-roll.jpg"
-    },
-    "Strawberry": {
-        "basePrice": 3.99,
-        "imageFile": "strawberry-cinnamon-roll.jpg"
-    }    
-};
 
 const queryString = window.location.search;
 
@@ -41,59 +9,81 @@ const queryString = window.location.search;
 const params = new URLSearchParams(queryString);
 
 // Finally, we can access the parameter we want using the "get" method:
-const chosenRoll = params.get('roll')
+const chosenRoll = params.get('roll');
 
 
-/* ---------------------------Update Page elements------------------------ */
-// Now, we will use the URL parameter to update our page.
-// Update the header text
-let headerElement;
-let rollImage;
-let rollBase;
-
+// if we are on the details page, we want to change some texts
 if ( document.URL.includes("details.html") ) {
-    headerElement = document.querySelector('.heading');
+        
+    let headerElement = document.querySelector('.heading');
     headerElement.innerText = chosenRoll + " Cinnamon Roll";
 
     // Update the image
-    rollImage = document.querySelector('.product-detail-image');
+    const rollImage = document.querySelector('.product-detail-image');
     rollImage.src = './assets/' + rolls[chosenRoll].imageFile;
 
     // Update the base price
-    rollBase = document.querySelector('#product-detail-price');
+    const rollBase = document.querySelector('#product-detail-price');
     rollBase.innerText = rolls[chosenRoll].basePrice;
-    
 }
 
-
-
-
-/* --------------------------Cart Prices (same as hw3)------------------------ */
-
-//object for glazingObj
+// object for glazing
 let glazingObj = {
     original: 0,
     sugarMilk: 0,
     vanillaMilk: 0.50,
     doubleChocolate: 1.50
-}
+};
 
-    //object for pack size
+// object for pack size
 let packSize ={
     one: 1,
     three: 3,
     six: 5,
     twelve: 10
+};
+
+
+// class to help build out the rolls
+class Roll {
+    constructor(rollType, rollGlazing, glazingAdaption, packSize, packAdaption, basePrice, image, totalPrice) {
+        this.type = rollType;
+        this.glazing =  rollGlazing;
+        this.glazingAdaption = glazingAdaption;
+        this.size = packSize;
+        this.packAdaption = packAdaption;
+        this.basePrice = basePrice;
+        this.image = image;
+        this.totalPrice = totalPrice;
+        this.element = null;
+    }
 }
+
+// initiate an empty cart array
+let cart = [];
+
+// if there are stored rolls then we want to get them from our storage
+if (localStorage.getItem('storedRolls') != null) {
+    retrieveFromLocalStorage();
+}
+
+// lets us access our cart by using JSON and localStorage
+function retrieveFromLocalStorage() {
+    const cartArrayString = localStorage.getItem('storedRolls');
+    // console.log(cartArrayString);
+    const cartArray = JSON.parse(cartArrayString);
+    for (const rollData of cartArray) {
+        cart.push(rollData);
+    }
+    console.log(localStorage.getItem('storedRolls'));
+}
+
 //set the defaults
 let thisglazingObjPrice = glazingObj.original;
 let glazingObjSelection = "Keep-original";
 let packSizeSelection = 1;
 let thisPackSizePrice = packSize.one;
-//find the price we want to be changing
-let basePrice = rolls[chosenRoll].basePrice;
-//make sure the price is a float
-basePrice = parseFloat(basePrice);
+
 
 
 //function to help see what the corresponding price is for the glazingObj
@@ -140,40 +130,32 @@ function packSizeChange(element) {
     return thisPackSizePrice;
 }
 
-//computes the total price using the glazingObj price, the pack size and the base price
 function computeTotal(){
-newBasePrice = parseFloat(basePrice);
-let updatedPrice = (newBasePrice + thisglazingObjPrice) * thisPackSizePrice;
-//change the text to the updated price
-document.getElementById("product-detail-price").innerHTML = updatedPrice.toFixed(2);
+    let basePrice = rolls[chosenRoll].basePrice;
+    //make sure the price is a float
+    basePrice = parseFloat(basePrice);
+    newBasePrice = basePrice;
+    let updatedPrice = (newBasePrice + thisglazingObjPrice) * thisPackSizePrice;
+    //change the text to the updated price
+    document.getElementById("product-detail-price").innerHTML = updatedPrice.toFixed(2);
 
 }
-
-class Roll {
-    constructor(rollType, rollGlazing, packSize, basePrice, totalPrice) {
-        this.type = rollType;
-        this.glazing =  rollGlazing;
-        this.size = packSize;
-        this.basePrice = basePrice;
-        this.totalPrice = totalPrice;
-        this.element = null;
-    }
-}
-
-//initiate an empty cart array
-let cart = [];
-
-//function is called when the user clicks the "Add to Cart" button
-//Creates a new instance of Roll using the selections the user picked
+//rollType, rollGlazing, glazingAdaption, packSize, packAdaption, basePrice, image, totalPrice) {
 function addToCart(){
-    // let totalPrice = (basePrice + thisglazingObjPrice) * thisPackSizePrice
-     let theRoll = new Roll(chosenRoll, glazingObjSelection, packSizeSelection, basePrice); 
-     cart.push(theRoll);
-     //print out the items in the cart
-     console.log(cart);
-     saveToLocalStorage();
-     return theRoll;
+    let basePrice = rolls[chosenRoll].basePrice;
+    //make sure the price is a float
+    basePrice = parseFloat(basePrice);
+
+    let totalPrice = (basePrice + thisglazingObjPrice) * thisPackSizePrice;
+    let rollImage = './assets/' + rolls[chosenRoll].imageFile;
+    let theRoll = new Roll(chosenRoll, glazingObjSelection, thisglazingObjPrice, packSizeSelection, thisPackSizePrice, basePrice, rollImage, totalPrice); 
+    cart.push(theRoll);
+    saveToLocalStorage();
+    return theRoll;
 }
 
-
-
+function saveToLocalStorage() {
+    const cartArrayString = JSON.stringify(cart);
+    console.log(cartArrayString);
+    localStorage.setItem('storedRolls', cartArrayString);
+}
