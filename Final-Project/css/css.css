@@ -1,0 +1,364 @@
+body {
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+    background-color: #131721;
+  }
+  
+  .topnav {
+    overflow: hidden;
+    background-color: #131721;
+    
+  }
+  
+  .active{
+      font-weight: bolder;
+  }
+  
+  .topnav a {
+   float: right;
+    color: #EC4B63;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    margin:10px;
+  }
+  
+  /* .topnav a:hover, .dropdown:hover {
+    background-color: #ddd;
+  } */
+  
+  .topnav a.split {
+    float: left;
+    color: #EC4B63;
+    
+}
+
+.dropdown {
+    float: right;
+    overflow: hidden;
+  }
+
+  .dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: #EC4B63;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    margin:10px;
+    background-color: #131721
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    background-color: #272e3f;
+  }
+
+  .dropdown-content a {
+    float: none;
+    color: #EC4B63;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+
+  h3{
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+} 
+
+#front-page-container{
+    text-align:center;
+    margin-right:auto;
+    margin-left:auto;
+}
+
+#sub-heading{
+    width:50%;
+    line-height:29px;
+    color:#ffffff;
+    margin-right:auto;
+    margin-left:auto;
+}
+
+.heading{
+    font-size:70px;
+    font-weight:900;
+    font-family: 'Roboto', sans-serif;
+    color:#ffffff;
+    
+}
+
+/* https://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_animate1 */
+.about {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #EC4B63;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 25px;
+    padding: 15px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 0px;
+  }
+  
+  .about span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .about span:after {
+    content: '\00bb';
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .about:hover span {
+    padding-right: 25px;
+  }
+  
+  .about:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+#profile-img{
+    width:200px;
+    height:auto;
+}
+
+.arrow {
+    border: solid #EC4B63;
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 3px;
+    width:20px;
+    height:20px;
+  }
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    
+    
+}
+
+.shift{
+    -webkit-animation:move 2s infinite;
+  animation: move 2s infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+@-webkit-keyframes move {
+    0% {
+      -webkit-transform: translate(30, 0);
+      transform: translate(30, 0);
+    }
+    100% {
+      -webkit-transform: translate(50px, 60px);
+      transform: translate(50px, 60px);
+    }
+  }
+  
+  @keyframes move {
+    0% {
+      -webkit-transform: translate(30, 0);
+      transform: translate(30, 0);
+    }
+    100% {
+      -webkit-transform: translate(30, 6 0px);
+      transform: translate(50, 60px);
+    }
+  }
+  
+  
+  
+  
+
+.projects {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+.projects-flex-container{
+    display: flex;
+    outline:solid rgb(141, 141, 141);
+    margin:5%;
+    transition: all .2s ease-in-out;
+}
+.projects-flex-container:hover{
+transform: scale(1.1);
+}
+
+.project-image > img{
+    width:450px;
+    height:auto;
+} 
+
+.project-text{
+    color: rgb(0, 0, 0);
+    width: 100%;
+    text-align: left;
+    padding:3%;
+    align-content:center;
+}
+
+.project-title{
+    font-size:30px;
+    font-weight:550;
+}
+
+#project-header{
+    padding-left:5%;
+    padding-top:5%;
+}
+
+
+.skills{
+    display: flex;
+}
+
+.skills > div{
+    background-color:#DDDDDD;
+    margin-right: 2%;
+    padding:10px;
+    color:#777777;
+    font-weight:bold;
+    border-radius: 5px;
+}
+
+
+#about-text{
+    text-align:left;
+    color:#EC4B63;
+}
+
+.about-container{
+    display:flex;
+    margin-top:10%;
+    margin-left:5%;
+}
+
+.about-text-column{
+    margin-left:20px;
+}
+
+.image{
+    width:50%;
+    height:500px;
+    background-color:#777777;
+}
+
+#about-subtext{
+    width:fit-content;
+    font-family: 'Roboto', sans-serif;
+    font-weight:350;
+    color:#FFFFFF;
+}
+
+
+.icons{
+    display:flex;
+    text-align:center;
+    margin: auto;
+    width: 55%;
+}
+
+.social-media-icons{
+    /* width:50px;
+    margin-left:200px; */
+    width:50px;
+}
+
+/* .social-media-icons:hover{
+    content: url('../images/linkedin-full.png');
+    display:inline;
+    width:70px;
+} */
+
+#email-icon{
+    width:50px;
+    margin-left:20px;
+}
+
+/* #email-icon:hover{
+    content: url('../images/email-full.png')
+} */
+
+
+
+/* https://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_animate1 */
+.resume-download {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #EC4B63;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 25px;
+    padding: 15px;
+    width: 190px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 0px;
+  }
+  
+  .resume-download span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .resume-download span:after {
+    content: url('../images/download.png');
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .resume-download:hover span {
+    padding-right: 25px;
+  }
+  
+  .resume-download:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+  .contact-button {
+    bottom: 10px;
+    right: 10px;
+    background-color: #717171;
+    text-decoration: none;
+    border-radius: 10px;
+    position: fixed;
+  }
+
+  #contact-button-icon{
+    width:30px;
+  }
