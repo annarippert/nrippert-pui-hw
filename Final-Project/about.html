@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="./css/css.css">
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Tangerine">
-    <!-- <script defer src="js/menu.js"></script> -->
+    <script defer src="js/chat.js"></script> 
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap" rel="stylesheet">
@@ -73,6 +73,18 @@
         <div>
             <a href="mailto:nrippert@andrew.cmu.edu"><img id="email-icon" src="./images/email.png" alt="send me an email"></a>
         </div>
+    </div>
+
+    <button class="contact-button" onclick="chatForm()"><img id="contact-button-icon" src="./images/comment.png" alt="contact me"></button>
+
+    <div class="chat-popup" id="myForm">
+      <form class="form-container">
+        <h1 id="chat-message-header">Send me a message!</h1>
+        <label for="msg"><b>Message</b></label>
+        <textarea placeholder="Type message.." name="msg" required></textarea>
+        <button type="submit" class="btn">Send</button>
+        <!-- <button type="button" class="btn cancel" onclick="closeForm()">Close</button> -->
+      </form>
     </div>
 </body>
 </html>
