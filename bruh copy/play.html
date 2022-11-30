@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Anna Rippert</title>
+    <link rel="stylesheet" href="./css/css.css">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Tangerine">
+    <script defer src="js/menu.js"></script>
+    <script defer src="js/play.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <div class="topnav" id="myTopnav">
+        <a href="index.html" class="split">Anna Rippert</a>
+        <a href="#">Resume</a>
+        <a href="about.html">About</a>
+        <a class="active" href="play.html">Play</a>
+        <a href="index.html">Work</a>
+        
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+    </div>
+
+    <!--Creating tabs for the user to swich content between-->
+    <div class="tab">
+      <button class="tablinks" onclick="openOption(event, 'Game Design')">Game Design</button>
+      <button class="tablinks" onclick="openOption(event, 'Animation')">Animation</button>
+    </div>
+    
+    <div id="Game Design" class="tabcontent">
+<!-- inspired by https://codepen.io/mahmudulhrabby/pen/GGqdvr?editors=1100-->
+    <div class="main_projects">
+      <ul class="cards"> 
+        <li class="cards_items">
+            <div class="card">
+                <div class="card_image"><video controls>
+                  <source src="./videos/line_run.mov" type="video/mov">
+                  <source src="./videos/line_run.mp4" type="video/mp4">
+                  Your browser does not support videos.
+                </video></div>
+                <div class="card_contents">
+                    <h2 class="card_title">Line Run</h2>
+                    <p>Designed and developed in Lua using Pico-8 during a summer course at Stanford University</p>
+                    <p class="play_dates">Summer 2017</p>
+                </div>
+            </div>
+        </li>
+          <li class="cards_items">
+              <div class="card">
+                  <div class="card_image">
+                    <iframe src="https://player.vimeo.com/video/413191771?h=b35385a077" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                  <div class="card_contents">
+                      <h2 class="card_title">Penguin Hopper</h2>
+                      <p>Designed and developed game in 3 weeks using python. Catch as many fish as you can without falling into the water.</p>
+                      <p class="play_dates">Summer 2017</p>
+                  </div>
+              </div>
+          </li>
+          <li class="cards_items">
+            <div class="card">
+                <div class="card_image"><video controls>
+                  <source src="./videos/domino_down.mov" type="video/mov">
+                  <source src="./videos/domino_down.mp4" type="video/mp4">
+                  Your browser does not support videos.
+                </video></div>
+                <div class="card_contents">
+                    <h2 class="card_title">Domino Down</h2>
+                    <p>Self-taught Swift and X-code to build my very first game! Placed on the App Store in 2016</p>
+                    <p class="play_dates">Spring 2016</p>
+                </div>
+            </div>
+        </li>
+        <li class="cards_items">
+            <div class="card">
+                <div class="card_image"><video controls>
+                  <source src="./videos/tower_island.mp4" type="video/mp4">
+                  Your browser does not support videos.
+                </video></div>
+                <div class="card_contents">
+                    <h2 class="card_title">Tower Island</h2>
+                    <p>Designed and developed game during Game Design courses at New York University</p>
+                    <p class="play_dates">Summer 2018</p>
+                </div>
+            </div>
+        </li>
+      </ul>
+  </div>
+</div>
+    
+    <div id="Animation" class="tabcontent">
+        <div class="main_projects">
+            <ul class="cards"> 
+              <li class="cards_items">
+                  <div class="card">
+                      <div class="card_image"><video controls>
+                        <source src="./videos/avocado_animation.mov" type="video/mov">
+                        <source src="./videos/avocado_animation.mp4" type="video/mp4">
+                        Your browser does not support videos.
+                      </video></div>
+                      <div class="card_contents">
+                          <h2 class="card_title">Ms. Avocado</h2>
+                          <p>Created using Game Maker. Each frame drawn individually.</p>
+                          <p class="play_dates">Fall 2019</p>
+                      </div>
+                  </div>
+              </li>
+              <li class="cards_items">
+                <div class="card">
+                    <div class="card_image"><video controls>
+                      <source src="./videos/shark.mp4" type="video/mp4">
+                      Your browser does not support videos.
+                    </video></div>
+                    <div class="card_contents">
+                        <h2 class="card_title">Fin the Shark</h2>
+                        <p>Designed, modeled, and rigged animation in Maya.</p>
+                        <p class="play_dates">Spring 2020</p>
+                    </div>
+                </div>
+            </li>
+            <li class="cards_items">
+                <div class="card">
+                    <div class="card_image"><video controls>
+                      <source src="./videos/coco.mp4" type="video/mp4">
+                      Your browser does not support videos.
+                    </video></div>
+                    <div class="card_contents">
+                        <h2 class="card_title">Coco the cat</h2>
+                        <p>Rigged cat using Maya</p>
+                        <p class="play_dates">Spring 2021</p>
+                    </div>
+                </div>
+            </li>
+            <li class="cards_items">
+                <div class="card">
+                    <div class="card_image"><video controls>
+                      <source src="./videos/cat_poker.mp4" type="video/mp4">
+                      Your browser does not support videos.
+                    </video></div>
+                    <div class="card_contents">
+                        <h2 class="card_title">Cat Poker</h2>
+                        <p>Every frame drawn individually</p>
+                        <p class="play_dates">Fall 2021</p>
+                    </div>
+                </div>
+            </li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>

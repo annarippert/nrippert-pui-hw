@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Anna Rippert</title>
+    <link rel="stylesheet" href="./css/css.css">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Tangerine">
+    <script defer src="js/menu.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <div class="topnav" id="myTopnav">
+        <a href="index.html" class="split">Anna Rippert</a>
+        <a href="#">Resume</a>
+        <a href="about.html">About</a>
+        <a href="play.html">Play</a>
+        <!-- <div class="dropdown">
+            <button class="dropbtn">Play
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="animation.html">Animation</a>
+              <a href="gamedesign.html">Game Design</a>
+            </div>
+        </div>  -->
+        <a class="active" href="index.html">Work</a>
+        
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+    </div>
+
+    <div class="container-fluid home">
+        <p class="line-1 anim-typewriter"> Hi, I'm Anna!</p>
+        <p id="home-intro-detail">
+            A UX Designer and Developer
+            <br><br><br><a href="about.html" class="button">Learn more about me</a>
+        </p>
+        
+    </div>
+
+    <br><br><br>
+
+    <!-- inspired by https://codepen.io/mahmudulhrabby/pen/GGqdvr?editors=1100-->
+    <div class="main_projects">
+        <ul class="cards"> 
+            <li class="cards_items">
+                <div class="card">
+                    <div class="card_image"><img src="./images/project1.png"></div>
+                    <div class="card_contents">
+                        <h2 class="card_title">Amazon Brand Registry Dashboard</h2>
+                        <p class="card_subtext">Redesigned the Brand Registry homepage for the Brand Protection Experience team to create a more enhanced and functional user experience.</p>
+
+                        <div class="skills">
+                            <div>UI/UX Design</div>
+                            <div>Prototyping</div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="cards_items">
+                <a href="./projects/project1.html"><div class="card">
+                    <div class="card_image"><img src="./images/project2.png"></div>
+                    <div class="card_contents">
+                        <h2 class="card_title">Homies</h2>
+                        <p class="card_subtext">Worked with cloud banking company Blend to create an online platform to connect home buyers .</p>
+                        <div class="skills">
+                            <div>UX Research</div>
+                            <div>UX Design</div>
+                            <div>Prototyping</div>
+                        </div>
+                    </div>
+                </div></a> 
+            </li>
+            <li class="cards_items">
+                <div class="card">
+                    <div class="card_image"><img src="../images/project1.png"></div>
+                    <div class="card_contents">
+                        <h2 class="card_title">The Duquesne Incline</h2>
+                        <div class="skills">
+                            <div>Web Design</div>
+                            <div>Front-end Programming</div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="cards_items">
+                <div class="card">
+                    <div class="card_image"><img src="./images/project2.png"></div>
+                    <div class="card_contents">
+                        <h2 class="card_title">Dashboard Design</h2>
+                        <div class="skills">
+                            <div>UX Research</div>
+                            <div>UX Design</div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+ 
+    
+    
+    <!-- <div id="front-page-container">
+        <img id="profile-img" src="./images/profile.png" alt="bitemoji waving">
+        <h1 class="heading">Hi, I'm Anna!</h1>
+        <h3 id="sub-heading">I am a UX Designer currently studing Information Systems and Human-Computer Interaction at Carnegie Mellon University.</h3>
+        <br><br>
+        <a href="about.html"><button class="about" style="vertical-align:middle"><span>Learn more </span></button></a>
+        <br>
+        <a href="#projects"><p><i class="shift arrow down"></i></p></a>
+    </div>
+
+    <br>
+    
+    <div class="projects">
+        <h2 id="project-header">View my selected work:</h2>
+        <div class="projects-flex-container">
+            <div class="project-image">
+                <img src="./images/project1.png" alt="image of project prototype">
+            </div>
+            <div class="project-text">
+                <h1 class="project-title">Project Title</h1>
+                <p>wbfwjebfkwjhebwkebhflwfebwehfbwkje fkwef wljeh flwjhe fjlweh fljwh eflj weljf welfwleh flw</p>
+                <div class="skills">
+                    <div>SKILL #1</div>
+                    <div>SKILL #2</div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="projects-flex-container">
+            <div class="project-image">
+                <img src="./images/project2.png" alt="image of project prototype">
+            </div>
+            <div class="project-text">
+                <h1 class="project-title">Project Title</h1>
+                <p>wbfwjebfkwjhebwkebhflwfebwehfbwkje fkwef wljeh flwjhe fjlweh fljwh eflj weljf welfwleh flw</p>
+                <div class="skills">
+                    <div>SKILL #1</div>
+                    <div>SKILL #2</div>
+                    <div>SKILL #3</div>
+                </div>
+            </div>
+
+        </div>
+
+    </div> -->
+</body>
+</html>
