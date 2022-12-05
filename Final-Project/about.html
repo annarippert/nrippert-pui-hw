@@ -1,90 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Anna Rippert</title>
     <link rel="stylesheet" href="./css/css.css">
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Tangerine">
-    <script defer src="js/chat.js"></script> 
+    <script defer src="js/menu.js"></script>
+    <script defer src="js/chat.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <div class="topnav">
+    <div class="topnav" id="myTopnav">
         <a href="index.html" class="split">Anna Rippert</a>
+        <!-- <a href="#">Resume</a> -->
         <a class="active" href="about.html">About</a>
-        <div class="dropdown">
-            <button class="dropbtn">Play
-              <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-                <a href="animation.html">Animation</a>
-                <a href="gamedesign.html">Game Design</a>
-            </div>
-        </div> 
+        <a href="play.html">Play</a>
         <a href="index.html">Work</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+    </div>
+    <br><br><br><br><br>
+    <h1 class="about_header">Hi, I am Anna!</h1>
+    <div class="about_container">
+        <div class="about_image">
+            <img src="./images/profile.jpeg" alt="profile photo of Anna Rippert">
+        </div>
+        <div class="about_text">
+            <p>I am a dual national (US and German) double majoring in Information Systems (with a concentration in Computing and Information Systems & Technology) and Human-Computer with minors in Animation and Special Effects, and Game Design at Carnegie Mellon University. </p>
+            <p>I am passionate about designing a better world through design. Designing interactions and building engaging experiences is what drives me. </p>
+            <a href="./files/Resume.pdf" download="Resume"><button class="button">Download my Resume</button></a>
+        </div>
     </div>
 
-    <!-- <div class="about-container"> 
-        <div class="about-images">
-            <img class="profile-pic" src="#" alt="">
-            <div class="icons">
-                <div>
-                    <a href="https://www.linkedin.com/in/anna-rippert-060a05173/"><img class="social-media-icons" src="./images/linkedin.png" alt="connect with me on linkeldn"></a>
-                </div>
-                <div>
-                    <a href="mailto:nrippert@andrew.cmu.edu"><img id="email-icon" src="./images/email.png" alt="send me an email"></a>
-                </div>
-            </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="about_companies">
+      <p>I have worked and designed for the following companies:</p><br>
+        <div class="about_companies_images">
+          <img src="./images/logos/amazon.png" class="about_companies_images_logo" alt="Amazon logo">
+          <img src="./images/logos/blend.png" class="about_companies_images_logo" alt="Blend logo">
+          <img src="./images/logos/cmu.png" class="about_companies_images_logo" alt="Carnegie Mellon University logo">
+          <img src="./images/logos/dadel.png" class="about_companies_images_logo" alt="Dadel logo">
+          <img src="./images/logos/hcii.png" class="about_companies_images_logo" alt="Human-computer Interaction Institute logo">
+          <img src="./images/logos/neurosyense.png" class="about_companies_images_logo" alt="Neurosyense logo">
+          <img src="./images/logos/u.s.army.png" class="about_companies_images_logo" alt="US Army logo">
+          <img src="./images/logos/amazon.png" class="about_companies_images_logo" alt="Amazon logo">
+          <img src="./images/logos/blend.png" class="about_companies_images_logo" alt="Blend logo">
+          <img src="./images/logos/cmu.png" class="about_companies_images_logo" alt="Carnegie Mellon University logo">
+          <img src="./images/logos/dadel.png" class="about_companies_images_logo" alt="Dadel logo">
+          <img src="./images/logos/hcii.png" class="about_companies_images_logo" alt="Human-computer Interaction Institute logo">
+          <img src="./images/logos/neurosyense.png" class="about_companies_images_logo" alt="Neurosyense logo">
+          <img src="./images/logos/u.s.army.png" class="about_companies_images_logo" alt="US Army logo">
         </div>
-        <div class="about-text">
-            <h1>Hello,<br>I'm Anna</h1>
-            <p id="about-subtext">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do <br>eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut <br>enim ad minim veniam, quis nostrud exercitation ullamco laboris <br>nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in <br> reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            </p>
-            <a href="./files/Resume.pdf" download="Resume"><button class="resume-download" style="vertical-align:middle"><span>Resume </span></button></a>
-
-        </div>
-    
-
-    </div> -->
-
-    <div class="about-container">
-        <div class="image">
-            <img src="img.jpg" alt="">
-        </div>
-        <div class="about-text-column">
-            <h1 class="heading" id="about-text">Hello,<br>I'm Anna</h1>
-            <p id="about-subtext">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do <br>eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut <br>enim ad minim veniam, quis nostrud exercitation ullamco laboris <br>nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in <br> reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            </p>
-            <a href="./files/Resume.pdf" download="Resume"><button class="resume-download" style="vertical-align:middle"><span>Resume </span></button></a>
-
-        </div>
-    
     </div>
     <br>
-    <div class="icons">
-        <div>
-            <a href="https://www.linkedin.com/in/anna-rippert-060a05173/"><img class="social-media-icons" src="./images/linkedin.png" alt="connect with me on linkeldn"></a>
-        </div>
-        <div>
-            <a href="mailto:nrippert@andrew.cmu.edu"><img id="email-icon" src="./images/email.png" alt="send me an email"></a>
-        </div>
+    <br>
+    <br>
+    <br>
+    
+    <table class="about_table">
+      <tr>
+        <td class="about_table_elements">
+          <div class="about_table_left">
+            <h5 class="about_extra_sub_headers">&#x1F5A5; Areas of Expertise</h5>
+            <p>User-centered Design<br>
+                3D Animation<br>
+                User Research<br>
+                Rapid Prototyping<br>
+                Interaction Design<br>
+                Usability Testing<br><br>
+                ...and more!
+            </p>
+          </div>
+          
+        </td>
+        <td class="about_table_elements">
+          <h5 class="about_extra_sub_headers">&#x1F4D3; Currently Learning</h5>
+          <p>Service Design<br>
+              Responsive Web Design<br>
+              Accessibility in Design
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td class="about_table_elements about_table_left">
+          <h5 class="about_extra_sub_headers">&#x1F369; Personal Interests</h5>
+          <p>Golfing<br>
+              Traveling<br>
+              Baking<br>
+              My two cats!
+          </p>
+        </td>
+        <td class="about_table_elements">
+          <h5 class="about_extra_sub_headers">&#x1F4A1; Current Projects</h5>
+          <p>Data-driven Zoo displays<br>
+              Bot Detection Website
+          </p>
+        </td>
+      </tr>
+    </table>
+    <br>
+
+    
+    <div class="footer">
+      <h5>Let's connect</h5>
+      <p>I'm always looking for new and exciting opportunities.</p><br>
+      <div class="about_social_media_icons">
+        <a href="https://github.com/annarippert"><img class="social_media_icons" src="./images/github.png"></a>
+        <a href="https://www.linkedin.com/in/anna-rippert-060a05173/"><img class="social_media_icons" src="./images/linkedin.png"></a>
+        <a href="mailto: nrippert@andrew.cmu.edu"><img class="social_media_icons" src="./images/email.png"></a>
+      </div>
     </div>
 
-    <button class="contact-button" onclick="chatForm()"><img id="contact-button-icon" src="./images/comment.png" alt="contact me"></button>
+    <button class="contact-button" onclick="chatForm()"><img id="contact-button-icon" src="./images/comment.png" alt="button opening up form to message me"></button>
 
     <div class="chat-popup" id="myForm">
-      <form class="form-container">
-        <h1 id="chat-message-header">Send me a message!</h1>
-        <label for="msg"><b>Message</b></label>
+      <form class="form-container" action="mailto:nrippert@andrew.cmu.edu">
+        <h5 id="chat-message-header">Send me a message!</h5>
         <textarea placeholder="Type message.." name="msg" required></textarea>
         <button type="submit" class="btn">Send</button>
-        <!-- <button type="button" class="btn cancel" onclick="closeForm()">Close</button> -->
       </form>
     </div>
+
+
 </body>
 </html>

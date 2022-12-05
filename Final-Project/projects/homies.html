@@ -14,12 +14,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 </head>
 <body>
     <div class="topnav" id="myTopnav">
         <a href="../index.html" class="split">Anna Rippert</a>
-        <a href="#">Resume</a>
+        <!-- <a href="#">Resume</a> -->
         <a href="../about.html">About</a>
         <a href="../play.html">Play</a>
         <a href="../index.html">Work</a>
@@ -27,6 +27,7 @@
             <i class="fa fa-bars"></i>
           </a>
     </div>
+    <!--Progress bar inspired by https://www.w3schools.com/w3css/w3css_progressbar.asp-->
     <div class="progress-container">
         <div class="progress-bar" id="myBar"></div>
     </div>  
@@ -40,7 +41,7 @@
                 <h5 class="project-detail-sub-headers">OVERVIEW</h5>
                 <p>Homies is a home-buying platform that connects you to other home-buyers.</p>
                 <p>This was created to help the company Blend, with the objective of finding a solution to make first-time homebuyers feel more financially and emotionally prepared to commit to buying a home.</p>
-                <button class="button">See Prototype</button>
+                <a href="#project-solution-id"><button class="button">See Prototype</button></a>
             </div>
             <div class="details">
                 <h5 class="project-detail-sub-headers">ROLE</h5>
@@ -106,7 +107,7 @@
                 </table>
             </div>
         </div>
-        <div class="project-solution">
+        <div class="project-solution" id="project-solution-id">
             <h2>Solution</h2>
             <p>Homies focuses on improving potential home buyers' emotional readiness for committing to homeownership. Homies connect hesitant and inexperienced potential home buyers with new homeowners in the area they intend to live in. Potential home buyers have the opportunity to match with homeowners who have recently gone through the home buying journey based on the user's preferences. Homies create a community of support where hesitant first-time homebuyers can become more confident and committed to homeownership as well as more emotionally prepared and dedicated to the process. </p>
             <h5 class="project-detail-sub-headers">LOW-FI PROTOTYPE</h5>
@@ -119,7 +120,7 @@
                 <img src="../images/project-homies/lowfi5.png" alt="">
             </div>
         </div>
-        <div class="project-next-steps alternate">
+        <div class="project-solution alternate">
             <h2>Reflection</h2>
             <h5 class="project-detail-sub-headers">&#x23F3; IF I HAD MORE TIME:</h5>
             <ul>
@@ -143,19 +144,31 @@
                 <div class="other-project">
                     <img src="../images/project1.png" class="other-project-image" alt="project">
                     <div class="other-project-overlay">
-                        <h5>Brand Protection Website Redesign</h5>
-                        <a href="#" class="button">View Project</a>
+                        <h5 class="project-other-overlay-text">Brand Protection Website Redesign</h5>
+                        <a href="./brandProtection.html" class="button overlay-botton">View Project</a>
                     </div>
                 </div>
-                <div>
-                    <img src="../images/project1.png" alt="project">
+                <div class="other-project">
+                    <img src="../images/project2.png" class="other-project-image scale_image" alt="project">
+                    <div class="other-project-overlay">
+                        <h5 class="project-other-overlay-text">Dashboard Design</h5>
+                        <a href="#" class="button overlay-botton">View Project</a>
+                    </div>
                 </div>
             </div>
         </div>
         <br>
 
         
-
+    <div class="footer">
+        <h5>Let's connect</h5>
+        <p>I'm always looking for new and exciting opportunities.</p><br>
+        <div class="about_social_media_icons">
+            <a href="https://github.com/annarippert"><img class="social_media_icons" src="../images/github.png"></a>
+            <a href="https://www.linkedin.com/in/anna-rippert-060a05173/"><img class="social_media_icons" src="../images/linkedin.png"></a>
+            <a href="mailto: nrippert@andrew.cmu.edu"><img class="social_media_icons" src="../images/email.png"></a>
+        </div>
+    </div>
     </div>
 </body>
 </html>
