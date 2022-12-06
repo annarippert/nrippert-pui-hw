@@ -4,33 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Anna Rippert</title>
+    <!--External links to css or styles-->
     <link rel="stylesheet" href="./css/css.css">
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Tangerine">
-    <script defer src="js/menu.js"></script>
-    <script defer src="js/chat.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--External links to js files-->
+    <script defer src="js/menu.js"></script>
+    <script defer src="js/chat.js"></script>
 </head>
 <body>
+  <!--Creating the top navigation-->
     <div class="topnav" id="myTopnav">
         <a href="index.html" class="split">Anna Rippert</a>
-        <!-- <a href="#">Resume</a> -->
         <a class="active" href="about.html">About</a>
         <a href="play.html">Play</a>
         <a href="index.html">Work</a>
+        <!--Making the navigation responsive-->
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
-          </a>
+        </a>
     </div>
     <br><br><br><br><br>
+    <!--creating a flex box with image,text, and button for resume-->
     <h1 class="about_header">Hi, I am Anna!</h1>
     <div class="about_container">
         <div class="about_image">
-            <img src="./images/profile.jpeg" alt="profile photo of Anna Rippert">
+            <img src="./images/profile.jpeg" alt="profile photo of me, Anna Rippert">
         </div>
         <div class="about_text">
             <p>I am a dual national (US and German) double majoring in Information Systems (with a concentration in Computing and Information Systems & Technology) and Human-Computer with minors in Animation and Special Effects, and Game Design at Carnegie Mellon University. </p>
@@ -39,10 +42,9 @@
         </div>
     </div>
 
-    <br>
-    <br>
-    <br>
-    <br>
+    <br><br><br><br>
+
+    <!--Infinite animated carousel illustrating companies -->
     <div class="about_companies">
       <p>I have worked and designed for the following companies:</p><br>
         <div class="about_companies_images">
@@ -62,15 +64,13 @@
           <img src="./images/logos/u.s.army.png" class="about_companies_images_logo" alt="US Army logo">
         </div>
     </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    
+    <br><br><br><br>
+    <!--table with extra information about me and my skillsets -->
     <table class="about_table">
       <tr>
         <td class="about_table_elements">
           <div class="about_table_left">
+            <!--Using HTML emojis! -->
             <h5 class="about_extra_sub_headers">&#x1F5A5; Areas of Expertise</h5>
             <p>User-centered Design<br>
                 3D Animation<br>
@@ -109,20 +109,18 @@
       </tr>
     </table>
     <br>
-
-    
+    <!--footer for users to connect with me on other social media platforms-->
     <div class="footer">
       <h5>Let's connect</h5>
       <p>I'm always looking for new and exciting opportunities.</p><br>
       <div class="about_social_media_icons">
-        <a href="https://github.com/annarippert"><img class="social_media_icons" src="./images/github.png"></a>
-        <a href="https://www.linkedin.com/in/anna-rippert-060a05173/"><img class="social_media_icons" src="./images/linkedin.png"></a>
-        <a href="mailto: nrippert@andrew.cmu.edu"><img class="social_media_icons" src="./images/email.png"></a>
+        <a href="https://github.com/annarippert"><img class="social_media_icons" src="./images/github.png" alt="link to github"></a>
+        <a href="https://www.linkedin.com/in/anna-rippert-060a05173/"><img class="social_media_icons" src="./images/linkedin.png" alt="link to linkedin"></a>
+        <a href="mailto: nrippert@andrew.cmu.edu"><img class="social_media_icons" src="./images/email.png" alt="link to my email"></a>
       </div>
     </div>
-
+    <!--button that opens up chat form to send me a message-->
     <button class="contact-button" onclick="chatForm()"><img id="contact-button-icon" src="./images/comment.png" alt="button opening up form to message me"></button>
-
     <div class="chat-popup" id="myForm">
       <form class="form-container" action="mailto:nrippert@andrew.cmu.edu">
         <h5 id="chat-message-header">Send me a message!</h5>
@@ -130,7 +128,5 @@
         <button type="submit" class="btn">Send</button>
       </form>
     </div>
-
-
 </body>
 </html>

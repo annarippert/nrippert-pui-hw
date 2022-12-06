@@ -13,6 +13,10 @@ body {
   background-color: #ffffff;
   
 }
+
+.topnav a:hover{
+  font-weight: bolder;
+}
   
 .active{
     font-weight: bolder;
