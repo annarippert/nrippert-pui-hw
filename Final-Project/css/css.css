@@ -8,20 +8,22 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+/*NAVIAGTION STYLES*/
+
 .topnav {
   overflow: hidden;
   background-color: #ffffff;
   
 }
-
+/*when it is hovered*/
 .topnav a:hover{
   font-weight: bolder;
 }
-  
+/*when navigation is active*/  
 .active{
     font-weight: bolder;
 }
-  
+/*naviagation link itself*/ 
 .topnav a {
   float: right;
   color: #000000;
@@ -32,18 +34,23 @@ body {
   margin:10px;
   background-color: #ffffff;
 }
-  
+/*styles for the "Anna Rippert" on top left corner*/  
 .topnav a.split {
   float: left;
   color: #000000;
   font-weight: bolder;
   background-color: #ffffff;    
 }
-
+/*take away ancor link styles*/
 a{
   text-decoration: none;
+  color:#000000;
 }
 
+#about-resume-link{
+  color:#ffffff;
+}
+/*styles for when there is a responsive navigation*/
 .dropdown {
     float: right;
     overflow: hidden;
@@ -91,7 +98,7 @@ a{
   display: none;
 }
 
-
+/*fixing the styles when the max width is less than 600px*/
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
@@ -115,11 +122,14 @@ a{
   }
 }
 
+/* STYLES FOR THE INDEX PAGE */
+
+/*animation helps create the type writing effect*/
 .anim-typewriter {
-    animation: typewriter 4s steps(30) 0.5s 1 normal both,
-        blinkTextCursor 800ms steps(44) infinite normal;
+    animation: typewriter 4s steps(30) 0.5s 1 normal both, blinkTextCursor 800ms steps(44) infinite normal;
 }
 
+/*main container on homepage*/
 .container-fluid home{
   display:flex;
   text-align: center;
@@ -127,7 +137,7 @@ a{
   justify-content:center;
   align-items: center;
 }
-
+/*helps create the typewriting effect*/
 .line-1{
     margin: 0 auto;
     margin-top:20%;
@@ -139,6 +149,7 @@ a{
     transform: translateY(-50%);
 }
 
+/*subtext on homepage*/
 #home-intro-detail{
   text-align: center;
   font-family: 'Lato', sans-serif;
@@ -157,6 +168,7 @@ a{
     }
 }
 
+/*giving that typewriting feel by making it flash*/
 @keyframes blinkTextCursor {
     from {
         border-right-color: black;
@@ -173,7 +185,7 @@ a{
   justify-content:center;
 }
 
-
+/*style for all buttons*/
 .button {
   text-align: center;
   background-color: #0024EC;
@@ -188,6 +200,7 @@ a{
 
 }
 
+/*style for all buttons when hovered*/
 .button:hover{
   background-color: #0321ca;
   box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
@@ -231,6 +244,7 @@ a{
   display: flex;
 }
 
+/*adjusting the carts when max width is less than desktop*/
 @media (min-width: 40rem) {
   .cards_item {
     width: 50%;
@@ -248,6 +262,7 @@ a{
   width:490px;
   text-align:left;
 }
+
 .card {
   background-color: white;
   border-radius: 0.25rem;
@@ -293,7 +308,6 @@ a{
   margin-left: 15%;
 }
 .about_image {
-  float: center;
   width: 100%;
   border-radius: 5px;
   box-sizing: border-box;
@@ -301,7 +315,6 @@ a{
 
 .about_image img{
   width:320px;
-  float: center;
 }
 
 .about_text{
@@ -328,6 +341,7 @@ a{
   margin-right:300px;;
 }
 
+/*adjusting the layout for the about page when responsive */
 @media screen and (max-width: 800px) {
   .about_container{
     display:inline-block;
@@ -364,7 +378,7 @@ a{
   align-content:center;
   align-items:center;
 }
-
+/*creating that infinite carasoul effect*/
 .about_companies_images{
   display:flex;
   height:100%;
@@ -382,6 +396,7 @@ a{
   text-align:center;
 }
 
+/*animating and making it move*/
 @keyframes imageScroller {
   0% {
     transform: translateX(10%);
@@ -401,6 +416,7 @@ h5{
   font-size:x-large;
 }
 
+/*all footers have these styles*/
 .footer{
   text-align:center;
   bottom:0px;
@@ -425,8 +441,6 @@ h5{
   }
 }
 
-
-
 /* STYLES FOR PLAY PAGE */
 
 /* animation and game design tabs */
@@ -440,7 +454,6 @@ h5{
   background-color: inherit;
   border: none;
   outline: none;
-  float: center;
   transition: 0.3s;
   cursor: pointer;
   padding: 14px 16px;
@@ -449,7 +462,7 @@ h5{
   
 }
 
-/* Chover state of tabs */
+/* hover state of tabs */
 .tab button:hover {
   text-decoration: underline;
 }
@@ -516,6 +529,7 @@ h5{
   padding: 0% 0% 5% 0%;
 }
 
+/*each section has the same padding*/
 .project-problem, .project-next-steps, .project-findings-container, .project-research, .project-solution{
   padding: 5% 0% 5% 0%;
 }
@@ -604,7 +618,7 @@ h5{
   clip-path: inset(0 -100vmax);
 }
 
-
+/*this refer to the recommended other projects at the bottom of project details page*/
 .other-project{
   position: relative;
   width:100%;
@@ -621,7 +635,6 @@ h5{
   color: white;
   text-align:center;
   align-items:center;
-  visibility: none;
   transition: .5s ease;
   background: rgb(0, 0, 0);
   background: rgba(0, 0, 0, 0.5);
@@ -648,7 +661,7 @@ h5{
   width:10%;
 }
 
-
+/*fix overlay when responsive*/
 @media screen and (max-width: 600px) {
   .project-other-overlay-text{
     margin-top:20%;
@@ -719,7 +732,7 @@ background-color: white;
 
 }
 
-/* Full-width textarea */
+/*  textarea */
 .form-container textarea {
 width: 100%;
 padding: 15px;
@@ -731,13 +744,13 @@ min-height: 100px;
 
 }
 
-/* When the textarea gets focus, do something */
+/* focus text area */
 .form-container textarea:focus {
 background-color: #ddd;
 outline: none;
 }
 
-/* Set a style for the submit/send button */
+/* send button style */
 .form-container .btn {
 background-color:#EC4B63;
 color: white;
@@ -748,7 +761,7 @@ width: 100%;
 margin-bottom:10px;
 font-size:large;}
 
-/* Add some hover effects to buttons */
+/* hover effects for button */
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
 }
