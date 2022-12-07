@@ -534,6 +534,17 @@ h5{
   padding: 5% 0% 5% 0%;
 }
 
+.project-findings-container{
+  display:flex;
+  justify-content:space-between;
+}
+
+.project-findings-container-left, .project-findings-container-right{
+  width:45%;
+}
+
+
+
 .project-detail-sub-headers{
   font-weight:lighter;
   font-size:larger;
