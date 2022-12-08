@@ -18,6 +18,7 @@
 </head>
 <body>
   <!--Creating the top navigation-->
+  <nav>
     <div class="topnav" id="myTopnav">
         <a href="index.html" class="split">Anna Rippert</a>
         <a class="active" href="about.html">About</a>
@@ -26,106 +27,145 @@
         <!--Making the navigation responsive-->
         <a href="javascript:void(0);" class="icon" onclick="responsiveNav()">
             <i class="fa fa-bars"></i>
+            <i>Menu</i>
         </a>
     </div>
+  </nav>
     <br><br><br><br><br>
     <!--creating a flex box with image,text, and button for resume-->
-    <h1 class="about_header">Hi, I am Anna!</h1>
-    <div class="about_container">
-        <div class="about_image">
-            <img src="./images/profile.jpeg" alt="profile photo of me, Anna Rippert">
-        </div>
-        <div class="about_text">
-            <p>I am a dual national (US and German) double majoring in Information Systems (with a concentration in Computing and Information Systems & Technology) and Human-Computer with minors in Animation and Special Effects, and Game Design at Carnegie Mellon University. </p>
-            <p>I am passionate about designing a better world through design. Designing interactions and building engaging experiences is what drives me. </p>
-            <a href="./files/Resume.pdf" download="Resume" class="button" id="about-resume-link">Download my Resume</a>
-        </div>
-    </div>
-
-    <br><br><br><br>
-
-    <!--Infinite animated carousel illustrating companies -->
-    <div class="about_companies">
-      <p>I have worked and designed for the following companies:</p><br>
-        <div class="about_companies_images">
-          <img src="./images/logos/amazon.png" class="about_companies_images_logo" alt="Amazon logo">
-          <img src="./images/logos/blend.png" class="about_companies_images_logo" alt="Blend logo">
-          <img src="./images/logos/cmu.png" class="about_companies_images_logo" alt="Carnegie Mellon University logo">
-          <img src="./images/logos/dadel.png" class="about_companies_images_logo" alt="Dadel logo">
-          <img src="./images/logos/hcii.png" class="about_companies_images_logo" alt="Human-computer Interaction Institute logo">
-          <img src="./images/logos/neurosyense.png" class="about_companies_images_logo" alt="Neurosyense logo">
-          <img src="./images/logos/u.s.army.png" class="about_companies_images_logo" alt="US Army logo">
-          <img src="./images/logos/amazon.png" class="about_companies_images_logo" alt="Amazon logo">
-          <img src="./images/logos/blend.png" class="about_companies_images_logo" alt="Blend logo">
-          <img src="./images/logos/cmu.png" class="about_companies_images_logo" alt="Carnegie Mellon University logo">
-          <img src="./images/logos/dadel.png" class="about_companies_images_logo" alt="Dadel logo">
-          <img src="./images/logos/hcii.png" class="about_companies_images_logo" alt="Human-computer Interaction Institute logo">
-          <img src="./images/logos/neurosyense.png" class="about_companies_images_logo" alt="Neurosyense logo">
-          <img src="./images/logos/u.s.army.png" class="about_companies_images_logo" alt="US Army logo">
-        </div>
-    </div>
-    <br><br><br><br>
-    <!--table with extra information about me and my skillsets -->
-    <table class="about_table">
-      <tr>
-        <td class="about_table_elements">
-          <div class="about_table_left">
-            <!--Using HTML emojis! -->
-            <h5 class="about_extra_sub_headers">&#x1F5A5; Areas of Expertise</h5>
-            <p>User-centered Design<br>
-                3D Animation<br>
-                User Research<br>
-                Rapid Prototyping<br>
-                Interaction Design<br>
-                Usability Testing<br><br>
-                ...and more!
-            </p>
+    <header><h1 class="about_header">Hi, I am Anna!</h1></header>
+    <main>
+      <div class="about_container">
+          <div class="about_image">
+              <img src="./images/profile.jpeg" alt="profile photo of me, Anna Rippert">
           </div>
-          
-        </td>
-        <td class="about_table_elements">
-          <h5 class="about_extra_sub_headers">&#x1F4D3; Currently Learning</h5>
-          <p>Service Design<br>
-              Responsive Web Design<br>
-              Accessibility in Design
+          <div class="about_text">
+              <p>I am a dual national (US and German) double majoring in Information Systems (with a concentration in Computing and Information Systems & Technology) and Human-Computer with minors in Animation and Special Effects, and Game Design at Carnegie Mellon University. </p>
+              <p>I am passionate about designing a better world through design. Designing interactions and building engaging experiences is what drives me. </p>
+              <br><a href="./files/Resume.pdf" download="Resume" class="button" id="about-resume-link">Download my Resume</a>
+          </div>
+      </div>
+
+      <br><br><br><br>
+
+      <!--Infinite animated carousel illustrating companies -->
+      <div class="about_companies">
+        <p>I have worked and designed for the following companies:</p><br>
+          <div class="about_companies_images">
+            <img src="./images/logos/amazon.png" class="about_companies_images_logo" alt="Amazon logo">
+            <img src="./images/logos/blend.png" class="about_companies_images_logo" alt="Blend logo">
+            <img src="./images/logos/cmu.png" class="about_companies_images_logo" alt="Carnegie Mellon University logo">
+            <img src="./images/logos/dadel.png" class="about_companies_images_logo" alt="Dadel logo">
+            <img src="./images/logos/hcii.png" class="about_companies_images_logo" alt="Human-computer Interaction Institute logo">
+            <img src="./images/logos/neurosyense.png" class="about_companies_images_logo" alt="Neurosyense logo">
+            <img src="./images/logos/u.s.army.png" class="about_companies_images_logo" alt="US Army logo">
+            <img src="./images/logos/amazon.png" class="about_companies_images_logo" alt="Amazon logo">
+            <img src="./images/logos/blend.png" class="about_companies_images_logo" alt="Blend logo">
+            <img src="./images/logos/cmu.png" class="about_companies_images_logo" alt="Carnegie Mellon University logo">
+            <img src="./images/logos/dadel.png" class="about_companies_images_logo" alt="Dadel logo">
+            <img src="./images/logos/hcii.png" class="about_companies_images_logo" alt="Human-computer Interaction Institute logo">
+            <img src="./images/logos/neurosyense.png" class="about_companies_images_logo" alt="Neurosyense logo">
+            <img src="./images/logos/u.s.army.png" class="about_companies_images_logo" alt="US Army logo">
+          </div>
+      </div>
+      <br><br><br><br>
+      <!--Extra information about me and my skillsets -->
+      <div class="about_container_companies">
+        <div class="about_container_compaies_left">
+          <h2 class="about_extra_sub_headers">&#x1F5A5; Areas of Expertise</h2>
+          <p>User-centered Design<br>
+              3D Animation<br>
+              User Research<br>
+              Rapid Prototyping<br>
+              Interaction Design<br>
+              Usability Testing<br><br>
+              ...and more!
           </p>
-        </td>
-      </tr>
-      <tr>
-        <td class="about_table_elements about_table_left">
-          <h5 class="about_extra_sub_headers">&#x1F369; Personal Interests</h5>
+          <br>
+          <h2 class="about_extra_sub_headers">&#x1F369; Personal Interests</h2>
           <p>Golfing<br>
               Traveling<br>
               Baking<br>
               My two cats!
           </p>
-        </td>
-        <td class="about_table_elements">
-          <h5 class="about_extra_sub_headers">&#x1F4A1; Current Projects</h5>
+        </div>
+        <div class="about_container_compaies_right">
+          <h2 class="about_extra_sub_headers">&#x1F4D3; Currently Learning</h2>
+          <p>Service Design<br>
+              Responsive Web Design<br>
+              Accessibility in Design
+          </p>
+          <br>
+          <h2 class="about_extra_sub_headers">&#x1F4A1; Current Projects</h2>
           <p>Data-driven Zoo displays<br>
               Bot Detection Website
           </p>
-        </td>
-      </tr>
-    </table>
-    <br>
-    <!--footer for users to connect with me on other social media platforms-->
-    <div class="footer">
-      <h5>Let's connect</h5>
-      <p>I'm always looking for new and exciting opportunities.</p><br>
-      <div class="about_social_media_icons">
-        <a href="https://github.com/annarippert"><img class="social_media_icons" src="./images/github.png" alt="link to github"></a>
-        <a href="https://www.linkedin.com/in/anna-rippert-060a05173/"><img class="social_media_icons" src="./images/linkedin.png" alt="link to linkedin"></a>
-        <a href="mailto:nrippert@andrew.cmu.edu"><img class="social_media_icons" src="./images/email.png" alt="link to my email"></a>
+        </div>
       </div>
-    </div>
+      <!--Using HTML emojis! -->
+      <!-- <table class="about_table">
+        <tr>
+          <td class="about_table_elements">
+            <div class="about_table_left">
+              
+              <h5 class="about_extra_sub_headers">&#x1F5A5; Areas of Expertise</h5>
+              <p>User-centered Design<br>
+                  3D Animation<br>
+                  User Research<br>
+                  Rapid Prototyping<br>
+                  Interaction Design<br>
+                  Usability Testing<br><br>
+                  ...and more!
+              </p>
+            </div>
+            
+          </td>
+          <td class="about_table_elements">
+            <h5 class="about_extra_sub_headers">&#x1F4D3; Currently Learning</h5>
+            <p>Service Design<br>
+                Responsive Web Design<br>
+                Accessibility in Design
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td class="about_table_elements about_table_left">
+            <h5 class="about_extra_sub_headers">&#x1F369; Personal Interests</h5>
+            <p>Golfing<br>
+                Traveling<br>
+                Baking<br>
+                My two cats!
+            </p>
+          </td>
+          <td class="about_table_elements">
+            <h5 class="about_extra_sub_headers">&#x1F4A1; Current Projects</h5>
+            <p>Data-driven Zoo displays<br>
+                Bot Detection Website
+            </p>
+          </td>
+        </tr>
+      </table> -->
+      <br>
+  </main>
+    <!--footer for users to connect with me on other social media platforms-->
+    <footer>
+      <div class="footer">
+        <h3>Let's connect</h3>
+        <p>I'm always looking for new and exciting opportunities.</p><br>
+        <div class="about_social_media_icons">
+          <a href="https://github.com/annarippert"><img class="social_media_icons" src="./images/github.png" alt="link to github"></a>
+          <a href="https://www.linkedin.com/in/anna-rippert-060a05173/"><img class="social_media_icons" src="./images/linkedin.png" alt="link to linkedin"></a>
+          <a href="mailto:nrippert@andrew.cmu.edu"><img class="social_media_icons" src="./images/email.png" alt="link to my email"></a>
+        </div>
+      </div>
+    </footer>
     <!--button that opens up chat form to send me a message-->
     <button class="contact-button" onclick="chatForm()"><img id="contact-button-icon" src="./images/comment.png" alt="button opening up form to message me"></button>
     <div class="chat-popup" id="myForm">
       <form class="form-container" action="mailto:nrippert@andrew.cmu.edu">
-        <h5 id="chat-message-header">Send me a message!</h5>
+        <label><h4 id="chat-message-header">Send me a message!</h4></label>
         <textarea placeholder="Type message.." name="msg" required></textarea>
-        <button type="submit" class="btn">Send</button>
+        <button type="submit" class="button">Send</button>
       </form>
     </div>
 </body>

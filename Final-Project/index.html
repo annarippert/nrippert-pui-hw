@@ -18,108 +18,117 @@
 </head>
 <body>
     <!--Creating the top navigation-->
-    <div class="topnav" id="myTopnav">
-        <a href="index.html" class="split">Anna Rippert</a>
-        <a href="about.html">About</a>
-        <a href="play.html">Play</a>
-        <a class="active" href="index.html">Work</a>
-        <!--Making the navigation responsive-->
-        <a href="javascript:void(0);" class="icon" onclick="responsiveNav()">
-            <i class="fa fa-bars"></i>
-        </a>
-    </div>
+    <nav>
+        <div class="topnav" id="myTopnav">
+            <a href="index.html" class="split">Anna Rippert</a>
+            <a href="about.html">About</a>
+            <a href="play.html">Play</a>
+            <a class="active" href="index.html">Work</a>
+            <!--Making the navigation responsive-->
+            <a href="javascript:void(0);" class="icon" onclick="responsiveNav()">
+                <i class="fa fa-bars"></i>
+                <i>Menu</i>
+            </a>
+        </div>
+    </nav>
 
     <!--Front page on index file-->
-    <div class="container-fluid home">
-        <h1 class="line-1 anim-typewriter"> Hi, I'm Anna!</h1>
-        <p id="home-intro-detail">
-            A UX Designer and Developer
-            <br><br><br><a href="about.html" class="button">Learn more about me</a>
-        </p>
-    </div>
+    <header>
+        <div class="container-fluid home">
+            <h1 class="line-1 anim-typewriter"> Hi, I'm Anna!</h1>
+            <p id="home-intro-detail">
+                A UX Designer and Developer
+                <br><br><br><a href="about.html" class="button">Learn more about me</a>
+            </p>
+        </div>
+    </header>
 
     <br><br><br>
 
     <!--inspired by https://codepen.io/mahmudulhrabby/pen/GGqdvr?editors=1100-->
     <!--Cards showing my selected UX projects-->
-    <div class="main_projects">
-        <ol class="cards"> 
-            <li class="cards_items">
-                <a href="./projects/brandProtection.html">
-                    <div class="card card_hover">
-                    <!--Each card containes an image, title, subtext, and skill tags-->
-                        <div class="card_image">
-                            <img src="./images/project1.png" alt="screenshot of prototype of final project for Amazon Brand Registry">
-                        </div>
-                        <div class="card_contents">
-                            <h2 class="card_title">Amazon Brand Registry Dashboard</h2>
-                            <p class="card_subtext">Redesigned Amazon's Brand Registry homepage to create a more enhanced and functional user experience.</p>
-                            <div class="skills">
-                                <div>UI/UX Design</div>
-                                <div>Prototyping</div>
+    <main>
+        <div class="main_projects">
+            <ol class="cards"> 
+                <li class="cards_items">
+                    <a href="./projects/brandProtection.html">
+                        <div class="card card_hover">
+                        <!--Each card containes an image, title, subtext, and skill tags-->
+                            <div class="card_image">
+                                <img src="./images/project1.png" alt="screenshot of prototype of final project for Amazon Brand Registry">
+                            </div>
+                            <div class="card_contents">
+                                <h2 class="card_title">Amazon Brand Registry Dashboard</h2>
+                                <p class="card_subtext">Redesigned Amazon's Brand Registry homepage to create a more enhanced and functional user experience.</p>
+                                <div class="skills">
+                                    <div>UI/UX Design</div>
+                                    <div>Prototyping</div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </a> 
-            </li>
-            <li class="cards_items">
-                <a href="./projects/homies.html">
-                    <div class="card card_hover">
-                        <div class="card_image">
-                            <img src="./images/project2.png" alt="screenshot of prototype of final project for Homies project">
+                    </a> 
+                </li>
+                <li class="cards_items">
+                    <a href="./projects/homies.html">
+                        <div class="card card_hover">
+                            <div class="card_image">
+                                <img src="./images/project2.png" alt="screenshot of prototype of final project for Homies project">
+                            </div>
+                            <div class="card_contents">
+                                <h2 class="card_title">Homies</h2>
+                                <p class="card_subtext">Worked with cloud banking company Blend to create an online platform to connect home buyers .</p>
+                                <div class="skills">
+                                    <div>UX Research</div>
+                                    <div>UX Design</div>
+                                    <div>Prototyping</div>
+                                </div>
+                            </div>
                         </div>
+                    </a> 
+                </li>
+                <li class="cards_items">
+                    <a href="./projects/duquesneIncline.html">
+                        <div class="card card_hover">
+                            <div class="card_image">
+                                <img src="./images/project3.png" alt="screenshot of prototype of final project for Duquesne Incline redesign project">
+                            </div>
+                            <div class="card_contents">
+                                <h2 class="card_title">The Duquesne Incline</h2>
+                                <p class="card_subtext">Re-designed and programmed website for a better user experience.</p>
+                                <div class="skills">
+                                    <div>Web Design</div>
+                                    <div>Front-end Programming</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <!-- <li class="cards_items">
+                    <div class="card card_hover">
+                        <div class="card_image"><img src="./images/project2.png" alt=""></div>
                         <div class="card_contents">
-                            <h2 class="card_title">Homies</h2>
-                            <p class="card_subtext">Worked with cloud banking company Blend to create an online platform to connect home buyers .</p>
+                            <h2 class="card_title">Dashboard Design</h2>
                             <div class="skills">
                                 <div>UX Research</div>
                                 <div>UX Design</div>
-                                <div>Prototyping</div>
                             </div>
                         </div>
                     </div>
-                </a> 
-            </li>
-            <li class="cards_items">
-                <a href="./projects/duquesneIncline.html">
-                    <div class="card card_hover">
-                        <div class="card_image">
-                            <img src="./images/project3.png" alt="screenshot of prototype of final project for Duquesne Incline redesign project">
-                        </div>
-                        <div class="card_contents">
-                            <h2 class="card_title">The Duquesne Incline</h2>
-                            <p class="card_subtext">Re-designed and programmed website for a better user experience.</p>
-                            <div class="skills">
-                                <div>Web Design</div>
-                                <div>Front-end Programming</div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <!-- <li class="cards_items">
-                <div class="card card_hover">
-                    <div class="card_image"><img src="./images/project2.png" alt=""></div>
-                    <div class="card_contents">
-                        <h2 class="card_title">Dashboard Design</h2>
-                        <div class="skills">
-                            <div>UX Research</div>
-                            <div>UX Design</div>
-                        </div>
-                    </div>
-                </div>
-            </li> -->
-        </ol>
-    </div>  
+                </li> -->
+            </ol>
+        </div> 
+    </main> 
     <!--footer for users to connect with me on other social media platforms-->
-    <div class="footer">
-        <h3>Let's connect</h3>
-        <p>I'm always looking for new and exciting opportunities.</p><br>
-        <div class="about_social_media_icons">
-            <a href="https://github.com/annarippert"><img class="social_media_icons" src="./images/github.png" alt="link to github"></a>
-            <a href="https://www.linkedin.com/in/anna-rippert-060a05173/"><img class="social_media_icons" src="./images/linkedin.png" alt="link to linkedin"></a>
-            <a href="mailto:nrippert@andrew.cmu.edu"><img class="social_media_icons" src="./images/email.png" alt="link to my email"></a>
+    <footer>
+        <div class="footer">
+            <h3>Let's connect</h3>
+            <p>I'm always looking for new and exciting opportunities.</p><br>
+            <div class="about_social_media_icons">
+                <a href="https://github.com/annarippert"><img class="social_media_icons" src="./images/github.png" alt="link to github"></a>
+                <a href="https://www.linkedin.com/in/anna-rippert-060a05173/"><img class="social_media_icons" src="./images/linkedin.png" alt="link to linkedin"></a>
+                <a href="mailto:nrippert@andrew.cmu.edu"><img class="social_media_icons" src="./images/email.png" alt="link to my email"></a>
+            </div>
         </div>
-    </div>
+    </footer>
 </body>
 </html>

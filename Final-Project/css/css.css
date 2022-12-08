@@ -345,7 +345,7 @@ a{
 @media screen and (max-width: 800px) {
   .about_container{
     display:inline-block;
-    text-align:left;
+    text-align:center;
   }
   .about_image {
     width: 100%;
@@ -359,10 +359,32 @@ a{
   .about_table table{
     display:block;
   }
+  .about_container_companies{
+    display:inline-block;
+    flex-wrap: wrap;
+    text-align:center;
+  }
+  .about_container_compaies_right, .about_container_compaies_left{
+    width:100%;
+    display:inline-block;
+  }
+  .about_header{
+    text-align:center;
+    margin-left: 0%;
+  }
+
+
+}
+
+.about_container_companies{
+  display:flex;
+  justify-content: space-around;
+  margin-left: 15%;
+  margin-right: 15%;
 }
 
 .about_companies{
-  color: #969EAA;
+  color:#5a5a5a;
   margin-right: auto;
   margin-left:auto;
   display:block;
@@ -542,8 +564,6 @@ h5{
 .project-findings-container-left, .project-findings-container-right{
   width:45%;
 }
-
-
 
 .project-detail-sub-headers{
   font-weight:lighter;
@@ -762,15 +782,13 @@ outline: none;
 }
 
 /* send button style */
-.form-container .btn {
-background-color:#EC4B63;
-color: white;
-padding: 16px 20px 16px 20px;
-border: none;
-cursor: pointer;
-width: 100%;
-margin-bottom:10px;
-font-size:large;}
+.form-container .button{
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  font-size:large;
+}
 
 /* hover effects for button */
 .form-container .btn:hover, .open-button:hover {
@@ -784,4 +802,8 @@ font-size:large;}
 
 textarea { 
 font-size: 18px; 
+}
+
+label{
+  font-size:x-large;
 }
