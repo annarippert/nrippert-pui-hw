@@ -1,3 +1,4 @@
+/*STYLE FOR THE WHOLE PAGE*/
 * {
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
@@ -13,6 +14,7 @@ body {
 .topnav {
   overflow: hidden;
   background-color: #ffffff;
+
   
 }
 /*when it is hovered*/
@@ -30,7 +32,7 @@ body {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 22px;
   margin:10px;
   background-color: #ffffff;
 }
@@ -461,6 +463,20 @@ h5{
     width:7%;
     margin-left:2%;
   }
+
+  h1{
+    font-size:2em;
+    line-height: 1;
+  }
+  .introduction{
+    width:100%;
+  }
+  .project-detail-container, .overview, .introduction{
+    width:100%;
+    margin-right:0%;
+    margin-left:0%;
+  }
+  
 }
 
 /* STYLES FOR PLAY PAGE */
@@ -515,6 +531,7 @@ h5{
   width:60%;
   margin-left:auto;
   margin-right:auto;
+  flex-wrap: wrap;
 }
 
 .header{
@@ -544,6 +561,7 @@ h5{
 
 .introduction{
   display:flex;
+  flex-wrap: wrap;
 }
 
 .overview{
@@ -796,15 +814,14 @@ outline: none;
   opacity: 1;
 }
 
-#chat-message-header{
-  text-align:left;
-  line-height:0%;
-}
-
 textarea { 
 font-size: 18px; 
 }
 
 label{
   font-size:x-large;
+  font-weight:500;
+  margin-top:45%;
+  padding-top:20%;
+  line-height:20%;
 }

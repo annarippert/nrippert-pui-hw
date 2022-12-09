@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Anna Rippert</title>
+    <!--External links to css or styles-->
+    <link rel="stylesheet" href="../css/css.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--External links to js files and libraries-->
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    <script defer src="../js/menu.js"></script>
+    <script defer src="../js/project-details.js"></script>
+</head>
+<body>
+    <!--Creating the top navigation-->
+    <nav>
+        <div class="topnav" id="myTopnav">
+            <a href="../index.html" class="split">Anna Rippert</a>
+            <!-- <a href="#">Resume</a> -->
+            <a href="../about.html">About</a>
+            <a href="../play.html">Play</a>
+            <a href="../index.html">Work</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </nav>
+    <!--Progress bar inspired by https://www.w3schools.com/w3css/w3css_progressbar.asp-->
+    <header>
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+        </div>  
+        <div class="header">
+            <img src="../images/project-zoo/header.png" id="header-image" alt="Laptop illustrating the front homepage of the designed website">
+        </div>
+    </header>
+    <!--Quick overview of the project-->
+    <div class="project-detail-containers">
+        <h1>Data Driven Zoo Display Design</h1>
+        <div class="introduction">
+            <div class="overview">
+                <h5 class="project-detail-sub-headers">OVERVIEW</h5>
+                <p>The Pittsburgh Zoo & Aquarium has received a grant from an anonymous donor to increase visitors and engagement at the Zoo in response to 2+ years of pandemic. We were tasked with analyzing the data, modeling it and mapping it to the various stakeholders.</p>
+                <p>To solve this problem our team designed 18 engaging screen displays that increase visitor engagement and accessibility while cutting down on wait times. After iterating and conducting critiques, we pitched to our entire class of 40+ students and to a panel of pretend CEOS, marketing managers, financial advisors and other business representatives through an intriguing zoo scavenger hunt experience that was implemented into our designs.</p><br>
+                <a href="#project-solution" class="button">See Prototype</a>
+            </div>
+            <!--Details about my role and timeline-->
+            <div class="details">
+                <h5 class="project-detail-sub-headers">ROLE</h5>
+                <p>UX Designer<br>Prototyping & Testing<br>Interaction Designer</p>
+                <h5 class="project-detail-sub-headers">DURATION</h5>
+                <p>3 weeks</p>
+            </div>
+        </div>
+        <!--Content about the project problem-->
+        <div class="project-problem alternate">
+            <h2>Problem</h2>
+            <p>Following two difficult years of COVID, the Pittsburgh Zoo was struggling to bring back visitors and keep them engaged. Due to the many COVID restrictions, they were not sure how to revitalize the city's animal-loving culture.</p>
+        </div>
+
+        <!--The research and insights I found throughout the process-->
+        <div class="project-research">
+            <h2>Research</h2>
+            <img src="../images/project-zoo/board.png" alt="evidence of whiteboarding various mental models to better understand the data">
+            <p>I was given a the notes from a set of interviews the Pittsburgh Zoo had conducted with from various stakeholders to analyze and an excel sheet with data about the Zoo. No other research was allowed which made it challenging and limited in the information we received. I was therefore forced to make assumptions and concretely stated them when creating mental models and user flows. </p>
+            <img src="../images/project-zoo/iterations.png" alt="process of how we went grom grayscale to color">
+            <p>After rapidly brainstorming many ideas, we realized there were many avenues we could take this project and decided to utilize a parallel prototyping approach.</p>
+            <p>Over the 3 weeks dedicated to the project, we were able to use class time to duct four critiques and get valuable feedback. We iterated in stages, starting from screens designed in grayscale, moving to adding color to the screens, after validating the designs we added animations and interactivity.</p>
+            <img src="../images/project-zoo/board.png" alt="entire Figma file illustrating all the prototypes we created">
+            <p>Being able to parallel prototype allowed us to explore many different possible paths and select a path that achieved out objectives the best based on feedback from the critiques.</p>
+        </div> 
+        <!--What the solution looked like with videos as samples-->
+        <div class="project-solution alternate" id="project-solution">
+            <h2>Solution</h2>
+            <p>Once we finalized our screens, we created an immersive pitch that demonstrated the value our screens would bring to the Pittsburgh Zoo. To help make the pitch more engaging, my team employed roles where we had a “Zoo Employee” and a “designer” to help walk our client through the screens and better understand how the screens would work in a simulated context and environment.</p>
+            <h5 class="project-detail-sub-headers">SAMPLE OF FINAL DISPLAYS</h5>
+            <div class="project-solution-images">
+                <p>Displayed at the entrance of the Zoo where vistors buy tickets</p>
+                <video controls>
+                    <source src="../videos/entrance.mp4" type="video/mp4">
+                    Your browser does not support videos.
+                </video>
+                <br>
+                <p>Each train station at the Zoo will have its own display, like this:</p>
+                <video controls>
+                    <source src="../videos/train-station.mp4" type="video/mp4">
+                    Your browser does not support videos.
+                </video>
+                <br>
+                <p>All venues and events happening will also have a display</p>
+                <video controls>
+                    <source src="../videos/venue.mp4" type="video/mp4">
+                    Your browser does not support videos.
+                </video>
+            </div>
+        </div>
+        <!--Reflecting back on the project-->
+        <div class="project-reflection">
+            <h2>Reflection</h2>
+            <h5 class="project-detail-sub-headers">&#x23F3; IF I HAD MORE TIME:</h5>
+            <ul>
+                <li>Refined the displays to be more consistant in terms of layout, color and style</li>
+                <li>Refined the scavenger hunt game idea</li>
+            </ul>
+
+            <h5 class="project-detail-sub-headers">&#x1F4DA; WHAT I LEARNED</h5>
+            <ul>
+                <li>Building mental models can help you better understand and synthesize data</li>
+                <li>Creating an interactive and immersive pitch can help your client better see the value in investing or using your designs</li>
+                <li>How to conduct useful critiques</li>
+            </ul>
+        </div>
+        <hr>
+        <!--Links to other projects the user may be interested in-->
+        <div class="project-other">
+            <br>
+            <h3 class="centered-text project-detail-sub-headers">Other projects you may be interested in</h3>
+            <br>
+            <div class="project-other-container">
+                <div class="other-project">
+                    <img src="../images/project-duquesneIncline-main.png" class="other-project-image" alt="Duquesne Incline Website Redesign project">
+                    <div class="other-project-overlay">
+                        <h3 class="project-other-overlay-text">Duquesne Incline Website Redesign</h3><br>
+                        <a href="./duquesneIncline.html" class="button overlay-botton">View Project</a>
+                    </div>
+                </div>
+                <div class="other-project">
+                    <img src="../images/project-homies-main.png" class="other-project-image scale_image" alt="Home-buying platform project">
+                    <div class="other-project-overlay">
+                        <h4 class="project-other-overlay-text">Homies</h4>
+                        <a href="./homies.html" class="button overlay-botton">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+
+     <!--footer for users to connect with me on other social media platforms-->
+     <footer class="footer">
+        <h5>Let's connect</h5>
+        <p>I'm always looking for new and exciting opportunities.</p><br>
+        <div class="about_social_media_icons">
+            <a href="https://github.com/annarippert"><img class="social_media_icons" src="../images/github.png" alt="link to github"></a>
+            <a href="https://www.linkedin.com/in/anna-rippert-060a05173/"><img class="social_media_icons" src="../images/linkedin.png" alt="link to linkedin"></a>
+            <a href="mailto:nrippert@andrew.cmu.edu"><img class="social_media_icons" src="../images/email.png" alt="link to my email"></a>
+        </div>
+    </footer>
+    </div>
+
+</body>
+</html>
