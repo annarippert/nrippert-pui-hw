@@ -22,12 +22,13 @@
     <nav>
         <div class="topnav" id="myTopnav">
             <a href="../index.html" class="split">Anna Rippert</a>
-            <!-- <a href="#">Resume</a> -->
             <a href="../about.html">About</a>
             <a href="../play.html">Play</a>
             <a href="../index.html">Work</a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <!--Making the navigation responsive-->
+            <a href="javascript:void(0);" class="icon" onclick="responsiveNav()">
                 <i class="fa fa-bars"></i>
+                <i>Menu</i>
             </a>
         </div>
     </nav>
@@ -140,18 +141,20 @@
             </div>
         </div>
         <br>
-
+        <br><br>
+        <!--When the user clicks on this button they will be guided back to the top of the page-->
+        <a onclick="scrollUp()" id="backUpbutton" class="button">Back to Top</a>
+        <br><br>
      <!--footer for users to connect with me on other social media platforms-->
-     <footer class="footer">
-        <h5>Let's connect</h5>
-        <p>I'm always looking for new and exciting opportunities.</p><br>
-        <div class="about_social_media_icons">
-            <a href="https://github.com/annarippert"><img class="social_media_icons" src="../images/github.png" alt="link to github"></a>
-            <a href="https://www.linkedin.com/in/anna-rippert-060a05173/"><img class="social_media_icons" src="../images/linkedin.png" alt="link to linkedin"></a>
-            <a href="mailto:nrippert@andrew.cmu.edu"><img class="social_media_icons" src="../images/email.png" alt="link to my email"></a>
-        </div>
-    </footer>
+        <footer class="footer">
+            <h5>Let's connect</h5>
+            <p>I'm always looking for new and exciting opportunities.</p><br>
+            <div class="about_social_media_icons">
+                <a href="https://github.com/annarippert"><img class="social_media_icons" src="../images/github.png" alt="link to github"></a>
+                <a href="https://www.linkedin.com/in/anna-rippert-060a05173/"><img class="social_media_icons" src="../images/linkedin.png" alt="link to linkedin"></a>
+                <a href="mailto:nrippert@andrew.cmu.edu"><img class="social_media_icons" src="../images/email.png" alt="link to my email"></a>
+            </div>
+        </footer>
     </div>
-
 </body>
 </html>
