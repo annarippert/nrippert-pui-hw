@@ -35,6 +35,7 @@
       <button class="tablinks" onclick="openOption(event, 'game_design')">Game Design</button>
       <button class="tablinks" onclick="openOption(event, 'animation')">Animation</button>
     </div>
+
     <!--content for if they open up game design page-->
     <!--each card containes a video, a title, a short description, and the date it was made-->
     <div id="game_design" class="tabcontent">
@@ -45,9 +46,10 @@
                     <div class="card">
                         <div class="card_image">
                             <video controls>
-                                <source src="./videos/line_run.mov" type="video/mov">
                                 <source src="./videos/line_run.mp4" type="video/mp4">
                                 Your browser does not support videos.
+                                <track label="English" kind="descriptions" srclang="en" src="./videos/line_run.vtt" default>
+            
                             </video>
                         </div>
                         <div class="card_contents">
@@ -61,6 +63,7 @@
                     <div class="card">
                         <div class="card_image">
                             <iframe src="https://player.vimeo.com/video/413191771?h=b35385a077" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                            <track src="./videos/penguin_hopper.vtt" label="English" kind="captions" srclang="en-us" default>
                         </div>
                         <div class="card_contents">
                             <h2 class="card_title">Penguin Hopper</h2>
@@ -175,7 +178,7 @@
 
     <!--footer for users to connect with me on other social media platforms-->
     <footer class="footer">
-        <h5>Let's connect</h5>
+        <h3>Let's connect</h3>
         <p>I'm always looking for new and exciting opportunities.</p><br>
         <div class="about_social_media_icons">
             <a href="https://github.com/annarippert"><img class="social_media_icons" src="./images/github.png" alt="link to github"></a>

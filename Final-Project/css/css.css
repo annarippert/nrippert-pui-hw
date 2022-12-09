@@ -469,6 +469,7 @@ h5{
 .tab {
   text-align:center;
   overflow: hidden; 
+  font-size:xx-large;
 }
 
 /* buttons inside the tab */
@@ -480,7 +481,7 @@ h5{
   cursor: pointer;
   padding: 14px 16px;
   text-align:center;
-  font-size: 17px;
+  font-size:xx-large;
   
 }
 
@@ -504,7 +505,7 @@ h5{
 }
 
 .play_dates{
-  color:#777777;
+  color:#5a5a5a;
   font-weight:lighter;
 }
 

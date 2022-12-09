@@ -163,8 +163,8 @@
     <button class="contact-button" onclick="chatForm()"><img id="contact-button-icon" src="./images/comment.png" alt="button opening up form to message me"></button>
     <div class="chat-popup" id="myForm">
       <form class="form-container" action="mailto:nrippert@andrew.cmu.edu">
-        <label><h4 id="chat-message-header">Send me a message!</h4></label>
-        <textarea placeholder="Type message.." name="msg" required></textarea>
+        <label for="contact-message"><h4 id="chat-message-header">Send me a message!</h4></label>
+        <textarea id="contact-message" placeholder="Type message.." name="contact-message"></textarea>
         <button type="submit" class="button">Send</button>
       </form>
     </div>
